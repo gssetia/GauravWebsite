@@ -159,7 +159,7 @@ import winner from './Components/winner.jpg';
 
 
 
-export default class brainMapper extends React.Component{
+export default class Tester extends React.Component{
 
 constructor(props){
 	super(props);
@@ -420,7 +420,6 @@ this.setState({val:""});
 
       <div>
       
-       <h1> Hello </h1>
 
       <Layout 
       reset={this.state.reset}

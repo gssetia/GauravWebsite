@@ -11,7 +11,7 @@ export default class Layout extends React.Component {
 			};
 		}
 
-		
+		//<a onClick= {(e) =>{this.clicked();}} >
 	render(){
 		return(
 				<div>
