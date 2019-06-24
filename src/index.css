@@ -7,6 +7,13 @@ body {
 ol, ul {
   
 }
+.navBarButtons{
+  margin-top:25%;
+}
+
+.navBar{
+  max-width: 11%;
+}
 
 .skipTotal {
   position:absolute;
