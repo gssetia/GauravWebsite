@@ -420,7 +420,6 @@ this.setState({val:""});
 
       <div>
       
-       <h1> Hello </h1>
 
       <Layout 
       reset={this.state.reset}
@@ -435,4 +434,6 @@ this.setState({val:""});
       );
   }
 }
+
+
 

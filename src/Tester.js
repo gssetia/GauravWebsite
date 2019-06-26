@@ -173,7 +173,8 @@ constructor(props){
     wrongTotal:0,    //keep track of the total times the uder guessed wrong
     hintS:'s',       //used to change hintTotal when its singular
     skipS:'s',       //used to change skipTotal when its singular
-    val:"",          //value of the input
+    val:"",			 //value of the input
+    shouldRender:false,          
     hintText:null,   //text of the hint
     capitalText:null,//text of the capital hint
     points:0,        //keep track of user's total points
@@ -273,8 +274,9 @@ constructor(props){
     this.onGuess = this.onGuess.bind(this);
     this.onHint = this.onHint.bind(this);
     this.onSkip = this.onSkip.bind(this);
-    
+    this.layoutElement = React.createRef();
 	}
+
 
 /*
 HandleNext method used to save space, process the screen to the next country 
@@ -282,8 +284,8 @@ HandleNext method used to save space, process the screen to the next country
   handleNext(){
         this.setState({hintText:""});               //reset text hint to blank
         this.setState({rank:this.state.rank+1});    //move to the next country
-        this.setState({flag:null})                  //reset flag hint to blank
-        this.setState({add:4})                      //reset potential points earned to default (4)
+        this.setState({flag:null});                 //reset flag hint to blank
+        this.setState({add:4});                     //reset potential points earned to default (4)
         this.setState({capitalText:null});          //reset capital hint to blank
         //reset the three hint indicators back to unused state
         document.getElementById("dot1").style.backgroundColor = '#66ff33' 
@@ -352,6 +354,7 @@ onClick method is used when the user starts the game and when the user resets.
   onClick(){
       this.setState({reset:"Reset"});
       this.setState({shouldRender:true});
+      this.layoutElement.current.changeShown();
       if(this.state.reset==="Reset")  {
         this.setState({rank:0});
         this.setState({capitalText:null});
@@ -373,7 +376,7 @@ onClick method is used when the user starts the game and when the user resets.
 
 /*
 onGuess method is used when the user enters an answer
-  If the input is correct, then the handleNext methdd is used to process to the next country,
+  If the input is correct, then the handleNext method is used to process to the next country,
     then the total points is increased based on how many hints were used, from 4 to 1
   If the input is incorrect, then the total incorrect guesses increases by one 
   This can be seen on the left side of the screen
@@ -385,12 +388,12 @@ onGuess method is used when the user enters an answer
    if(this.state.rank!==74){
     //this.setState({rank:this.state.rank+1});
 
-    if(document.getElementById("input").value.toLowerCase() === this.state.images[this.state.rank].id){
+    if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
       
       this.setState({points:this.state.points+this.state.add});
       this.handleNext();
       
-    }else if(document.getElementById("input").value.toLowerCase() !== "") {
+    }else if(document.getElementById("input").value.replace(/ /g, '') !== "") {
       this.setState({wrongTotal:this.state.wrongTotal +1});
     }
 
@@ -422,8 +425,8 @@ this.setState({val:""});
       
 
       <Layout 
-      reset={this.state.reset}
-      shouldRender={this.state.shouldRender} 
+      ref = {this.layoutElement}
+      reset={this.state.reset} 
       onClick={this.onClick}
       />
 

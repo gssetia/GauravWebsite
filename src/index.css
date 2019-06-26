@@ -13,23 +13,43 @@ ol, ul {
 
 .navBar{
   max-width: 11%;
+
 }
+
+.rules{
+  position:absolute;
+  left:30%;
+  right:30%;
+  top:35%;
+  background-color: #0c8dff;
+  font: 15px "Century Gothic", Futura, Serif;
+}
+
+.howtoplay{
+   font: 30px "Century Gothic", Futura, Serif;
+  
+}
+
 
 .skipTotal {
   position:absolute;
-
+  left:12%;
   top:36%;
-
+  font-size: 22px;
 }
 .hintTotal {
   position:absolute;
+  left:12%;
   top:43%;
+  font-size: 22px;
 
 }
 
 .wrongTotal {
   position:absolute;
+  left:12%;
   top:50%;
+  font-size: 22px;
 }
 
 h2 {
@@ -38,7 +58,9 @@ h2 {
   
 }
 
-
+.startreset{
+  color:darkblue;
+}
 
 .input{
   position: absolute;
@@ -55,6 +77,9 @@ h2 {
   background-color:#3CBC8D;
   color:white;
   border-color: green;
+  right: 50%;
+  left: 50%;
+  transform:translateX(-50%);
 }
 
 input[type=text]:focus{
@@ -66,12 +91,12 @@ input[type=text]:focus{
   height:auto;
   width:auto;
   max-height: 280px;
-  max-width: 370px;
+  max-width: 350px;
 
   right: 50%;
   left: 50%;
   transform:translate(-50%, -50%);
-  margin-top:13%;  
+  margin-top:27%;  
 }
 
 .dot {
@@ -128,19 +153,19 @@ input[type=text]:focus{
 
 .pointsTitle{
 position:fixed;
-left:6%;
-bottom:0%;
+left:13%;
+bottom:1%;
 }
 
 .pointText{
-  background-color: purple;
-  font-size:30px;
-  color:white;
+  background-color: gold;
+  font-size:35px;
+  color:black;
   padding-left: 5px;
   padding-right: 5px;
   position:fixed;
-  bottom:-0%;
-  left:24%;
+  bottom:1%;
+  left:30%;
 }
 
 .hintText{
@@ -213,8 +238,10 @@ bottom:0%;
 }
 
 .styles1  {
- margin-left:auto;
- margin-right:auto;
+  position:absolute;
+  right: 50%;
+  left: 50%;
+  transform:translate(-50%, 10%);
   background: powderblue;
   font-size: 24px;
   font-weight: bold;
