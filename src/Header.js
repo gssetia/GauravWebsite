@@ -27,7 +27,6 @@ export default class Header extends React.Component {
 
 			<h1 className="pointText">{this.props.points}</h1>
 
-			
 
 			<button type="submit" className="buttonGuess" onClick={this.props.onGuess}>Guess</button>
 		
@@ -36,6 +35,8 @@ export default class Header extends React.Component {
 			<button type="submit" className="skip" onClick={this.props.onSkip}>Skip</button>
 
 			<button type="submit" className="hint" onClick={this.props.onHint}>Hint</button>
+
+			<button type="submit" className="mute" onClick={this.props.onMute}> {this.props.muteText}</button>
 
 			<h1 className="hintsTitle">Hints:</h1>
 

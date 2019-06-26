@@ -156,7 +156,8 @@ import Fmali from'./Components/mali.png';
 import Fcyprus from './Components/cyprus.png';
 import allFlag from './Components/allFlag.jpg';
 import winner from './Components/winner.jpg';
-
+import correct from './Components/correct.mp3'
+import incorrect from './Components/incorrect.wav'
 
 
 export default class Tester extends React.Component{
@@ -177,6 +178,8 @@ constructor(props){
     shouldRender:false,          
     hintText:null,   //text of the hint
     capitalText:null,//text of the capital hint
+    muteText:"MUTE",
+    mute:false,
     points:0,        //keep track of user's total points
     add:4,           //keep track of potential points on right answer (lowers as you hint)
     flag:null,       //keep track of the flag for each respective country
@@ -274,7 +277,9 @@ constructor(props){
     this.onGuess = this.onGuess.bind(this);
     this.onHint = this.onHint.bind(this);
     this.onSkip = this.onSkip.bind(this);
+    this.onMute = this.onMute.bind(this);
     this.layoutElement = React.createRef();
+    
 	}
 
 
@@ -392,9 +397,11 @@ onGuess method is used when the user enters an answer
       
       this.setState({points:this.state.points+this.state.add});
       this.handleNext();
+      {this.state.mute === false ? this.handleAudio(correct) : null}
       
     }else if(document.getElementById("input").value.replace(/ /g, '') !== "") {
       this.setState({wrongTotal:this.state.wrongTotal +1});
+      {this.state.mute === false ? this.handleAudio(incorrect) : null}
     }
 
     // }else if(document.getElementById("input").value.toLowerCase() === "") {
@@ -408,6 +415,19 @@ onGuess method is used when the user enters an answer
   }
   }
 
+onMute(){
+
+	if (this.state.mute === true){
+		this.setState({mute:false});
+		this.setState({muteText:'MUTE'})
+
+	}else{
+		this.setState({mute:true});
+		this.setState({muteText:'UNMUTE'})
+	}	
+	
+}
+
 handleChange(event){
   this.setState({val: event.target.value});
 }
@@ -415,6 +435,11 @@ handleChange(event){
 handleSubmit(event){
 this.setState({val:""});
   event.preventDefault();
+}
+
+handleAudio(audioFile){
+	let audio = new Audio(audioFile);
+	audio.play();
 }
 
   render(){
@@ -430,7 +455,7 @@ this.setState({val:""});
       onClick={this.onClick}
       />
 
-      {this.state.shouldRender ? <Header capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} hintS = {this.state.hintS} skipS = {this.state.skipS} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
+      {this.state.shouldRender ? <Header onMute = {this.onMute} muteText = {this.state.muteText} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} hintS = {this.state.hintS} skipS = {this.state.skipS} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
 
       </div>
 

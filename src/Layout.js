@@ -33,9 +33,9 @@ export default class Layout extends React.Component {
 		<div className = "rules">		
 		<p className = "howtoplay"> How to Play</p>
 		<ol>
-		  <li> You have to guess the country shown by only looking at its outline. The outline is not to scale. </li>
+		  <li> You have to guess the country by only looking at its outline. The outline is not to scale. </li>
 		  <br/>
-		  <li> You can use the 3 hints provided, however the hints lowers the points you obtain from a correct answer. Starting at 4 points with no hints to 1 point using all hints. 
+		  <li> You can use the 3 hints provided, however the hints lower the points you obtain from a correct answer. Starting at 4 points with no hints to 1 point using all hints. 
 		  <br/>
 		  <br/>
 		    First hint: a brief phrase

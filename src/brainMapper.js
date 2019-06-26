@@ -427,7 +427,7 @@ this.setState({val:""});
       onClick={this.onClick}
       />
 
-      {this.state.shouldRender ? <Header capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} hintS = {this.state.hintS} skipS = {this.state.skipS} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
+      {this.state.shouldRender ? <Header muteText = {this.state.muteText} onMute = {this.onMute} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} hintS = {this.state.hintS} skipS = {this.state.skipS} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
 
       </div>
 

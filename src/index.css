@@ -16,6 +16,26 @@ ol, ul {
 
 }
 
+.mute{
+  outline:none;
+  border-radius:10px;
+  position:fixed;
+  padding:8px;
+  border-color:black;
+  background-color:black;
+  color:white;
+  font-size:15px;
+  right:82%;
+  top:3%;
+}
+
+.mute:hover{
+  background-color:red;
+}
+.mute:active {
+  transform: translateY(3px);
+}
+
 .rules{
   position:absolute;
   left:30%;
@@ -29,7 +49,6 @@ ol, ul {
    font: 30px "Century Gothic", Futura, Serif;
   
 }
-
 
 .skipTotal {
   position:absolute;
@@ -52,13 +71,11 @@ ol, ul {
   font-size: 22px;
 }
 
-h2 {
-  
-  margin-left:3%;
-  
+.startreset{
+  color:blue;
 }
 
-.startreset{
+.startreset:hover{
   color:darkblue;
 }
 
