@@ -156,8 +156,11 @@ import Fmali from'./Components/mali.png';
 import Fcyprus from './Components/cyprus.png';
 import allFlag from './Components/allFlag.jpg';
 import winner from './Components/winner.jpg';
-import correct from './Components/correct.mp3'
-import incorrect from './Components/incorrect.wav'
+import correctAudio from './Components/correct.mp3'
+import incorrectAudio from './Components/wrong.wav'
+import skipAudio from './Components/skip.wav'
+import hintAudio from './Components/hint.wav'
+import winnerAudio from './Components/finish.wav'
 
 
 export default class Tester extends React.Component{
@@ -313,6 +316,7 @@ onHint method used to process 3 separate hints in order
   onHint(){
     
     if (this.state.add === 4) {
+      {this.state.mute === false ? this.handleAudio(hintAudio) : null};
       this.setState({add:3});
       this.setState({hintText:this.state.images[this.state.rank].hint});
       document.getElementById("dot1").style.backgroundColor = 'red';
@@ -321,6 +325,7 @@ onHint method used to process 3 separate hints in order
       {this.state.hintTotal===0 ? this.setState({hintS:""}):this.setState({hintS:"s"})};
 
     }else if (this.state.add === 3) {
+      {this.state.mute === false ? this.handleAudio(hintAudio) : null};
       this.setState({flag:this.state.images[this.state.rank].flag});
       document.getElementById("dot2").style.backgroundColor = 'red';
       document.getElementById("dot2").style.borderColor = '#ff6633';
@@ -330,6 +335,7 @@ onHint method used to process 3 separate hints in order
 
 
     }else if (this.state.add === 2) {
+      {this.state.mute === false ? this.handleAudio(hintAudio) : null};
       this.setState({capitalText:this.state.images[this.state.rank].capital});
       document.getElementById("dot3").style.backgroundColor = 'red';
       document.getElementById("dot3").style.borderColor = '#ff6633';
@@ -346,6 +352,11 @@ onSkip method is used when the user skips
 */
   onSkip(){
        if(this.state.rank!==74){
+       	if (this.state.rank === 73){
+      		this.handleAudio(winnerAudio);
+      	}else{
+      		{this.state.mute === false ? this.handleAudio(skipAudio) : null};
+      	}
         this.handleNext();
         this.setState({skipTotal:this.state.skipTotal + 1});
         {this.state.skipTotal===0 ? this.setState({skipS:""}):this.setState({skipS:"s"})};
@@ -396,12 +407,17 @@ onGuess method is used when the user enters an answer
     if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
       
       this.setState({points:this.state.points+this.state.add});
-      this.handleNext();
-      {this.state.mute === false ? this.handleAudio(correct) : null}
       
+      if (this.state.rank === 73){
+      	this.handleAudio(winnerAudio);
+      }else{
+      	{this.state.mute === false ? this.handleAudio(correctAudio) : null};
+      }
+      this.handleNext();
+
     }else if(document.getElementById("input").value.replace(/ /g, '') !== "") {
       this.setState({wrongTotal:this.state.wrongTotal +1});
-      {this.state.mute === false ? this.handleAudio(incorrect) : null}
+      {this.state.mute === false ? this.handleAudio(incorrectAudio) : null}
     }
 
     // }else if(document.getElementById("input").value.toLowerCase() === "") {

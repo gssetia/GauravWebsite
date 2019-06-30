@@ -1,10 +1,6 @@
 import React from 'react';
 
 
-function updateState(shouldR){
-	this.setState({shouldR})
-}
-
 export default class Layout extends React.Component {
 
 	constructor(){
