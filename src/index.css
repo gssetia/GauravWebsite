@@ -1,41 +1,47 @@
+/*General*/
+
 body {
   background-color: #0c8dff;
   font: 15px "Century Gothic", Futura, Serif;
 
 }
 
-ol, ul {
-  
-}
+/*index.js*/
+
 .navBarButtons{
   margin-top:25%;
+
+}
+
+.navbar:hover{
+  color:black;
 }
 
 .navBar{
+  color:black;
+  position:absolute;
   max-width: 11%;
 
 }
 
-.mute{
-  outline:none;
-  border-radius:10px;
-  position:fixed;
-  padding:8px;
-  border-color:black;
-  background-color:black;
-  color:white;
-  font-size:15px;
-  right:82%;
-  top:3%;
+/*Home*/
+
+.welcome{
+  position: absolute;
+  left:50%;
+  top:10%;
+  transform:translateX(-40%);
+  font-weight: bold;
+  font-size:4vw
 }
 
-.mute:hover{
-  background-color:red;
-}
-.mute:active {
-  transform: translateY(3px);
+.Gaurav{
+  max-height: 600px;
+  transform:translateX(16%);
+
 }
 
+/*Layout*/
 .rules{
   position:absolute;
   left:30%;
@@ -47,28 +53,6 @@ ol, ul {
 
 .howtoplay{
    font: 30px "Century Gothic", Futura, Serif;
-  
-}
-
-.skipTotal {
-  position:absolute;
-  left:12%;
-  top:36%;
-  font-size: 22px;
-}
-.hintTotal {
-  position:absolute;
-  left:12%;
-  top:43%;
-  font-size: 22px;
-
-}
-
-.wrongTotal {
-  position:absolute;
-  left:12%;
-  top:50%;
-  font-size: 22px;
 }
 
 .startreset{
@@ -79,6 +63,31 @@ ol, ul {
   color:darkblue;
 }
 
+.styles1  {
+  position:absolute;
+  right: 50%;
+  left: 50%;
+  transform:translate(-50%, 10%);
+  background: powderblue;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  width: 340px;
+  border-style:dotted;
+  border-color:blue;
+  border-bottom-color: blue;
+  border-top-color: blue;
+  border-width:20px;
+  border-radius:10px;
+  text-align:center;
+  color:blue;
+  outline-width:5px;
+  outline-style: solid;
+  outline-offset: 5px;
+  outline-color: powderblue;
+}
+
+/*Header*/
 .input{
   position: absolute;
   width:29%;
@@ -101,6 +110,47 @@ ol, ul {
 
 input[type=text]:focus{
   background-color:green;
+}
+
+.mute{
+  outline:none;
+  border-radius:10px;
+  position:fixed;
+  padding:8px;
+  border-color:black;
+  background-color:black;
+  color:white;
+  font-size:15px;
+  right:82%;
+  top:3%;
+}
+
+.mute:hover{
+  background-color:red;
+}
+.mute:active {
+  transform: translateY(3px);
+}
+
+.skipTotal {
+  position:absolute;
+  left:12%;
+  top:36%;
+  font-size: 22px;
+}
+.hintTotal {
+  position:absolute;
+  left:12%;
+  top:43%;
+  font-size: 22px;
+
+}
+
+.wrongTotal {
+  position:absolute;
+  left:12%;
+  top:50%;
+  font-size: 22px;
 }
 
 .img {
@@ -231,6 +281,7 @@ bottom:1%;
 .hint:active {
   transform: translateY(5px);
 }
+
 .hintsTitle{
   right:16%;
   top:20%;
@@ -252,28 +303,4 @@ bottom:1%;
 
 .buttonGuess {
   display:none;
-}
-
-.styles1  {
-  position:absolute;
-  right: 50%;
-  left: 50%;
-  transform:translate(-50%, 10%);
-  background: powderblue;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 50px;
-  width: 340px;
-  border-style:dotted;
-  border-color:blue;
-  border-bottom-color: blue;
-  border-top-color: blue;
-  border-width:20px;
-  border-radius:10px;
-  text-align:center;
-  color:blue;
-  outline-width:5px;
-  outline-style: solid;
-  outline-offset: 5px;
-  outline-color: powderblue;
 }

@@ -271,7 +271,7 @@ constructor(props){
     {value:cyprus, id:'cyprus',hint:'Ukraine claims this island as their own.',flag:Fcyprus, capital:'Nicosia'},
     {value:winner,id:'hazel',hint:"There's no hint if you've already won!",flag:allFlag, capital:'Please stop'},
     ]
-		};
+	};
 
     //Inherit methods and events
     this.handleChange = this.handleChange.bind(this); 
@@ -419,15 +419,6 @@ onGuess method is used when the user enters an answer
       this.setState({wrongTotal:this.state.wrongTotal +1});
       {this.state.mute === false ? this.handleAudio(incorrectAudio) : null}
     }
-
-    // }else if(document.getElementById("input").value.toLowerCase() === "") {
-    //   this.setState({rank:this.state.rank+1});
-    //   this.setState({hintText:this.state.images[this.state.rank].hint});
-    //   this.setState({flag:this.state.images[this.state.rank].flag})
-    //   this.setState({capitalText:this.state.images[this.state.rank].capital});
-    //   this.setState({wrongTotal:this.state.wrongTotal +1});
-    // }  
-
   }
   }
 
