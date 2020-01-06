@@ -3,22 +3,16 @@
 body {
   background-color: #0c8dff;
   font: 15px "Century Gothic", Futura, Serif;
-
 }
 
 /*index.js*/
 
 .navBarButtons{
   margin-top:25%;
-
 }
 
-.navbar:hover{
-  color:black;
-}
 
 .navBar{
-  color:black;
   position:absolute;
   max-width: 11%;
 
@@ -29,7 +23,16 @@ body {
 .welcome{
   position: absolute;
   left:50%;
-  top:10%;
+  bottom:7%;
+  transform:translateX(-40%);
+  font-weight: bold;
+  font-size:4vw
+}
+
+.name{
+  position: absolute;
+  left:50%;
+  bottom:15%;
   transform:translateX(-40%);
   font-weight: bold;
   font-size:4vw
@@ -304,3 +307,80 @@ bottom:1%;
 .buttonGuess {
   display:none;
 }
+
+
+
+
+
+
+
+.card {
+  width:280px;
+  box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
+  transition: .25s;
+  position:absolute;
+}
+.card:hover {
+    box-shadow: 10px 5px 40px 20px darken(#341cac, 10%);
+    cursor: pointer;
+} 
+
+.card-header {
+  height: 150px;
+  width: 100%;
+  padding: 15px;
+  width:100%;
+  background-size:cover;
+  color:#fff;
+}
+
+.card-header--title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-body {
+  padding: 15px;
+  background-color:#fff;
+  width:100%;
+}
+
+.date {
+  font-size: 11px;
+  font-weight: 600;
+  color: grey;
+}
+
+.body-content {
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.button-primary {
+  border: none;
+  box-shadow: none;
+  font-family: inherit;
+  background-color:transparent;
+  color: $blue;
+  font-size: 15px;
+  transition:.25s;
+  
+  i{
+    padding-right:4px;
+  }
+}
+
+
+.designer-link {
+  color:#fff;
+  text-align:center;
+  font-size: 12px;
+  text-decoration: none;
+  display:block;
+}
+/*
+// {this.state.homeBool && <Home/>}       
+      // {this.state.appBool && <Tester/>}
+      // {this.state.aboutBool && <About/>} 
+      // {this.state.contactBool && <Contact/>} */

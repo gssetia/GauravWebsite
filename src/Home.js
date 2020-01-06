@@ -1,12 +1,11 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
-import { pulse } from 'react-animations'
-import {Animated} from "react-animated-css";
+import { fadeIn } from 'react-animations'
 import Gaurav from'./Components/gs.JPG';
 import './index.css';
 // <img src= {Gaurav} className = "Gaurav"/> 
 
-const Pulse = styled.div`animation: 3s ${keyframes`${pulse}`} infinite`;
+const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`}`;
 
 
 export default class Home extends React.Component {
@@ -26,7 +25,11 @@ export default class Home extends React.Component {
 				<div>
 				
 				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-				<h1 className = 'welcome w3-animate-fading'> Welcome! </h1>
+				
+				<FadeIn>
+				<h1 className = 'name'> I am Gauravdeep Setia </h1>
+				<h1 className = 'welcome'> Welcome to my website! </h1>
+				</FadeIn>
 				</div>
 			);
 	}
