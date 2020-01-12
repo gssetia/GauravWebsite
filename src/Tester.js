@@ -436,12 +436,12 @@ onMute(){
 }
 
 handleChange(event){
-  this.setState({val: event.target.value});
+    this.setState({val: event.target.value});
 }
 
 handleSubmit(event){
-this.setState({val:""});
-  event.preventDefault();
+	this.setState({val:""});
+    event.preventDefault();
 }
 
 handleAudio(audioFile){
