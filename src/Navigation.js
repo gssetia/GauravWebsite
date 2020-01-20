@@ -25,7 +25,7 @@ export default class Navigation extends React.Component {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-      <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center navBar">
+      <nav className="w3-sidebar w3-bar-block w3-medium w3-hide-small w3-center navBar">
         
 
         <NavLink to = "/" onClick = {this.onHome} className="w3-bar-item w3-button w3-padding-large w3-white navBarButtons">

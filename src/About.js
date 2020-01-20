@@ -30,7 +30,7 @@ export default class About extends React.Component {
 						I fell in love with the idea that I could learn to design and implement a computer to do whatever I wanted.
 						In high school, I began programming and instantly began to realize the depth and complexity it takes to program the things that I took for granted. 
 						Such as calculators, cell phones, or even stop lights.
-						Its so difficult to comprehend all the work that's needed for me to simply google search.
+						It's very difficult to comprehend all the work that's needed for me to simply google search.
 						This led me to appreciate the world around me.
 						Now that I have the opportunity to learn the magic that comes from computer science, I'm excited and motivated to create and contribute.    </p>
 					</div>

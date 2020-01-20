@@ -10,12 +10,11 @@ body {
   margin:0;
 }
 
-/*index.js*/
+/*Navigation*/
 
 .navBarButtons{
-  margin-top:25%;
+  margin-top:5.5vh;
 }
-
 
 .navBar{
   position:absolute;
@@ -43,7 +42,7 @@ body {
 
 .intro{
   position: absolute;
-  right:9%;
+  right:12%;
   top:40%;
   font-size:2vw;
   width:400px;
