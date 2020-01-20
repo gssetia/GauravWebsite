@@ -12,12 +12,14 @@ export default class Contact extends React.Component {
 		
 	render(){
 		return(
-				<div class="post-container">
-    <h3 class="post-title">Post title</h3>
-    <div class="post-thumb"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
-    <div class="post-content">
-        <p> hello</p></div>
-</div>
+				<div>
+					<div className='contactContainer'>
+					<h1 className ='contactTitle'> Reach out to me </h1>
+        				<p className='contactContent'> Email: gaurav.singh.setia@gmail.com<br></br><br></br>
+        				Linkedin: linkedin.com/in/gauravdeep-setia<br></br><br></br>
+        				GitHub: github.com/gssetia</p>
+        			</div>
+				</div>
 
 			);
 	}

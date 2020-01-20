@@ -1,4 +1,6 @@
 import React from 'react';
+import errorPic from './Components/errorpic.png';
+import './index.css';
 
 
 export default class Error extends React.Component {
@@ -16,7 +18,8 @@ export default class Error extends React.Component {
 	render(){
 		return(
 				<div>
-				<p> You tried a dead link</p>
+				<img className="errorPic" src={errorPic}/>
+				<h1 className = 'errorMessage'> Page not found</h1>
 				</div>
 			);
 	}
