@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components'
 import { pulse } from 'react-animations'
 import { fadeIn } from 'react-animations'
-import {Animated} from "react-animated-css";
 
 const Pulse = styled.div`animation: 3s ${keyframes`${pulse}`} infinite`;
 const FadeIn = styled.div`animation: 3s ${keyframes`${fadeIn}`}`;
@@ -54,7 +53,7 @@ export default class Header extends React.Component {
 			</FadeIn>
 			<FadeInLonger>
 			<Pulse>
-    			<img alt="outline" className="img" id = "img" src={this.props.images[this.props.rank].value}/>
+    			<img alt="outline" className="img" id = "img" src={this.props.images[this.props.rank].value} alt="Outline of a country"/>
 			</Pulse>
 			</FadeInLonger>
 			

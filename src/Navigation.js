@@ -1,9 +1,5 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import Tester from './Tester';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
 
 export default class Navigation extends React.Component {
 

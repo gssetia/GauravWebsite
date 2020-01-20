@@ -1,5 +1,9 @@
 import React from 'react';
 import suit from './Components/suit.jpeg';
+import { fadeIn } from 'react-animations'
+import styled, { keyframes } from 'styled-components'
+
+const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`}`;
 
 export default class About extends React.Component {
 
@@ -11,18 +15,16 @@ export default class About extends React.Component {
 			
 		}
 
-		
-			
-		
 	render(){
 		return(
 				<div class="post-container">
 					<h3 class="post-title"></h3>
 					<div className = 'container'>
 					<div class="post-thumb">
-						<img src= {suit} />
+						<img src= {suit} alt="Image of Gaurav" />
 					</div>
 					<div class="post-content">
+					<FadeIn>
 						<p> Hello! Let me tell you a little bit about myself. 
 						I'm currently in second year, studying at the University of Toronto. 
 						I'm on track to graduate in 2022 with an Honours Bachelor of Science with a Specialization of Computer Science. 
@@ -33,6 +35,7 @@ export default class About extends React.Component {
 						It's very difficult to comprehend all the work that's needed for me to simply google search.
 						This led me to appreciate the world around me.
 						Now that I have the opportunity to learn the magic that comes from computer science, I'm excited and motivated to create and contribute.    </p>
+						</FadeIn>
 					</div>
 					</div>
 				</div>

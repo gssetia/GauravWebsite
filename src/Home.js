@@ -1,10 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
 import { fadeIn } from 'react-animations'
-import Gaurav from './Components/gs.JPG';
 import './index.css';
-import Gaurav2 from './Components/gauravPic.jpeg';
-// <img src= {Gaurav} className = "Gaurav"/> 
 
 const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`}`;
 
@@ -30,9 +27,9 @@ export default class Home extends React.Component {
 				<div className = 'Gaurav'>
 				 </div>
 				<FadeIn>
-				<h1 className = 'name'> I am Gaurav Setia </h1>
-				<h1 className = 'welcome'> Welcome to my website! </h1>
-				<h2 className = 'intro'> Computer Programmer at the University of Toronto </h2>
+				<h2 className = 'intro'> <span className = 'welcome'>Welcome to my Website!</span><br></br><br></br>
+				<span className = 'name'>Gaurav Setia</span><br></br>
+				<span className = 'homeContent'> Computer Programmer <br></br>at the University of <br></br>Toronto </span> </h2>
 				</FadeIn>
 				</body>
 			);
