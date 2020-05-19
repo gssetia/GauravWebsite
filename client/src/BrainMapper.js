@@ -6,156 +6,168 @@ import axios from "axios";
 
 // Importing all of the country outlines 
 // and the country's respective flags (starts with F) from the src folder
-import usa from './Components/1.png';
-import canada from'./Components/2.png';
-import china from './Components/3.png';
-import australia from'./Components/4.png';
-import india  from './Components/5.png';
-import uk from'./Components/6.png';
-import russia from './Components/7.png';
-import italy from'./Components/8.png';
-import mexico from './Components/9.png';
-import france from'./Components/10.png';
-import germany from './Components/11.png';
-import brazil from'./Components/12.png';
-import spain from './Components/13.png';
-import egypt from'./Components/14.png';
-import japan from './Components/15.png';
-import newzealand from'./Components/16.png';
-import pakistan from './Components/17.png';
-import iceland from'./Components/18.png';
-import norway from './Components/19.png';
-import peru from'./Components/20.png';
-import greece from './Components/21.png';
-import denmark from'./Components/22.png';
-import chile from './Components/23.png';
-import cuba from'./Components/24.png';
-import turkey from './Components/25.png';
-import indonesia from'./Components/26.png';
-import southafrica from './Components/27.png';
-import finland from'./Components/28.png';
-import ireland from './Components/29.png';
-import poland from'./Components/30.png';
-import sweden from './Components/31.png';
-import israel from'./Components/32.png';
-import iran from'./Components/33.png';
-import nepal from './Components/34.png';
-import madagascar  from './Components/35.png';
-import iraq from'./Components/36.png';
-import syria from './Components/37.png';
-import phillipines from'./Components/38.png';
-import vietnam from './Components/39.png';
-import thailand from'./Components/40.png';
-import northkorea from './Components/41.png';
-import portugal from'./Components/42.png';
-import argentina from './Components/43.png';
-import romania from './Components/rom.png';
-import ukraine from'./Components/44.png';
-import southkorea from './Components/45.png';
-import austria from './Components/aus.png';
-import switzerland from'./Components/46.png';
-import malaysia from'./Components/47.png';
-import venezuela from'./Components/48.png';
-import belgium from './Components/49.png';
-import mongolia from'./Components/50.png';
-import jamaica from './Components/51.png';
-import panama from './Components/pan.png';
-import afghanistan from'./Components/52.png';
-import vaticancity from './Components/vat.png';
-import haiti from './Components/ha.png';
-import hungary from'./Components/hun.png';
-import saudiarabia from './Components/53.png';
-import srilanka from'./Components/sri.png';
-import bangladesh from'./Components/bang.png';
-import macedonia from './Components/mac.png';
-import ethiopia from'./Components/54.png';
-import netherlands from'./Components/nl.png';
-import unitedarabemirates from'./Components/uae.png';
-import armenia from'./Components/arm.png';
-import kazakhstan from './Components/kaz.png';
-import somalia from './Components/55.png';
-import colombia from'./Components/col.png';
-import tanzania from'./Components/tanz.png';
-import cambodia from'./Components/camb.png';
-import tunisia from'./Components/tunis.png';
-import mali from'./Components/mal.png';
-import cyprus from './Components/56.png';
-import Fusa from './Components/usa.png';
-import Fcanada from './Components/canada.png';
-import Fchina from './Components/china.png';
-import Faustralia from'./Components/australia.png';
-import Findia  from './Components/india.png';
-import Fuk from'./Components/uk.png';
-import Frussia from './Components/russia.png';
-import Fitaly from'./Components/italy.png';
-import Fmexico from './Components/mexico.png';
-import Ffrance from'./Components/france.png';
-import Fgermany from './Components/germany.png';
-import Fbrazil from'./Components/brazil.png';
-import Fspain from './Components/spain.png';
-import Fegypt from'./Components/egypt.png';
-import Fjapan from './Components/japan.png';
-import Fnewzealand from'./Components/newzealand.png';
-import Fpakistan from './Components/pakistan.png';
-import Ficeland from'./Components/iceland.png';
-import Fnorway from './Components/norway.png';
-import Fperu from'./Components/peru.png';
-import Fgreece from './Components/greece.png';
-import Fdenmark from'./Components/denmark.png';
-import Fchile from './Components/chile.png';
-import Fcuba from'./Components/cuba.png';
-import Fturkey from './Components/turkey.png';
-import Findonesia from'./Components/indonesia.png';
-import Fsouthafrica from './Components/southafrica.png';
-import Ffinland from'./Components/finland.png';
-import Fireland from './Components/ireland.png';
-import Fpoland from'./Components/poland.png';
-import Fsweden from './Components/sweden.png';
-import Fisrael from'./Components/israel.png';
-import Firan from'./Components/iran.png';
-import Fnepal from './Components/nepal.png';
-import Fmadagascar  from './Components/madagascar.png';
-import Firaq from'./Components/iraq.png';
-import Fsyria from './Components/syria.png';
-import Fphillipines from'./Components/phillipines.png';
-import Fvietnam from './Components/vietnam.png';
-import Fthailand from'./Components/thailand.png';
-import Fnorthkorea from './Components/northkorea.png';
-import Fportugal from'./Components/portugal.png';
-import Fargentina from './Components/argentina.png';
-import Fromania from './Components/romania.png';
-import Fukraine from'./Components/ukraine.png';
-import Fsouthkorea from './Components/southkorea.png';
-import Faustria from'./Components/austria.png';
-import Fswitzerland from'./Components/switzerland.png';
-import Fmalaysia from'./Components/malaysia.png';
-import Fvenezuela from'./Components/venezuela.png';
-import Fbelgium from './Components/belgium.png';
-import Fmongolia from'./Components/mongolia.png';
-import Fjamaica from './Components/jamaica.png';
-import Fpanama from './Components/panama.png';
-import Fafghanistan from'./Components/afghanistan.png';
-import Fvaticancity from './Components/vaticancity.png';
-import Fhaiti from './Components/haiti.png';
-import Fhungary from'./Components/hungary.png';
-import Fsaudiarabia from './Components/saudiarabia.png';
-import Fsrilanka from'./Components/srilanka.png';
-import Fbangladesh from'./Components/bangladesh.png';
-import Fmacedonia from './Components/macedonia.png';
-import Fethiopia from'./Components/ethiopia.png';
-import Fnetherlands from './Components/netherlands.png';
-import Fuae from './Components/unitedarabemirates.png';
-import Farmenia from'./Components/armenia.png';
-import Fkazakhstan from'./Components/kazakhstan.png';
-import Fsomalia from './Components/somalia.png';
-import Fcolombia from './Components/colombia.png';
-import Ftanzania from'./Components/tanzania.png';
-import Fcambodia from'./Components/cambodia.png';
-import Ftunisia from'./Components/tunisia.png';
-import Fmali from'./Components/mali.png';
-import Fcyprus from './Components/cyprus.png';
-import allFlag from './Components/allFlag.jpg';
-import winner from './Components/winner.jpg';
+import O1 from './Components/1.png';
+import O2 from'./Components/2.png';
+import O3 from './Components/3.png';
+import O4 from'./Components/4.png';
+import O5  from './Components/5.png';
+import O6 from'./Components/6.png';
+import O7 from './Components/7.png';
+import O8 from'./Components/8.png';
+import O9 from './Components/9.png';
+import O10 from'./Components/10.png';
+import O11 from './Components/11.png';
+import O12 from'./Components/12.png';
+import O13 from './Components/13.png';
+import O14 from'./Components/14.png';
+import O15 from './Components/15.png';
+import O16 from'./Components/16.png';
+import O17 from './Components/17.png';
+import O18 from'./Components/18.png';
+import O19 from './Components/19.png';
+import O20 from'./Components/20.png';
+import O21 from './Components/21.png';
+import O22 from'./Components/22.png';
+import O23 from './Components/23.png';
+import O24 from'./Components/24.png';
+import O25 from './Components/25.png';
+import O26 from'./Components/26.png';
+import O27 from './Components/27.png';
+import O28 from'./Components/28.png';
+import O29 from './Components/29.png';
+import O30 from'./Components/30.png';
+import O31 from './Components/31.png';
+import O32 from'./Components/32.png';
+import O33 from'./Components/33.png';
+import O34 from './Components/34.png';
+import O35  from './Components/35.png';
+import O36 from'./Components/36.png';
+import O37 from './Components/37.png';
+import O38 from'./Components/38.png';
+import O39 from './Components/39.png';
+import O40 from'./Components/40.png';
+import O41 from './Components/41.png';
+import O42 from'./Components/42.png';
+import O43 from './Components/43.png';
+import O44 from './Components/44.png';
+import O45 from'./Components/45.png';
+import O46 from './Components/46.png';
+import O47 from './Components/47.png';
+import O48 from'./Components/48.png';
+import O49 from'./Components/49.png';
+import O50 from'./Components/50.png';
+import O51 from './Components/51.png';
+import O52 from'./Components/52.png';
+import O53 from './Components/53.png';
+import O54 from './Components/54.png';
+import O55 from'./Components/55.png';
+import O56 from './Components/56.png';
+import O57 from './Components/57.png';
+import O58 from'./Components/58.png';
+import O59 from './Components/59.png';
+import O60 from'./Components/60.png';
+import O61 from'./Components/61.png';
+import O62 from './Components/62.png';
+import O63 from'./Components/63.png';
+import O64 from'./Components/64.png';
+import O65 from'./Components/65.png';
+import O66 from'./Components/66.png';
+import O67 from'./Components/67.png';
+import O68 from'./Components/68.png';
+import O69 from './Components/69.png';
+import O70 from'./Components/70.png';
+import O71 from'./Components/71.png';
+import O72 from './Components/72.png';
+import O73 from'./Components/73.png';
+import O74 from'./Components/74.png';
+import O75 from'./Components/75.png';
+import O76 from'./Components/76.png';
+import O77 from'./Components/77.png';
+import O78 from'./Components/78.png';
+import O79 from './Components/79.png';
+import O80 from './Components/80.jpg';
+
+import F1 from './Components/F1.png';
+import F2 from './Components/F2.png';
+import F3 from './Components/F3.png';
+import F4 from './Components/F4.png';
+import F5 from './Components/F5.png';
+import F6 from './Components/F6.png';
+import F7 from './Components/F7.png';
+import F8 from './Components/F8.png';
+import F9 from  './Components/F9.png';
+import F10 from './Components/F10.png';
+import F11 from './Components/F11.png';
+import F12 from './Components/F12.png';
+import F13 from './Components/F13.png';
+import F14 from './Components/F14.png';
+import F15 from './Components/F15.png';
+import F16 from './Components/F16.png';
+import F17 from './Components/F17.png';
+import F18 from './Components/F18.png';
+import F19 from './Components/F19.png';
+import F20 from './Components/F20.png';
+import F21 from './Components/F21.png';
+import F22 from './Components/F22.png';
+import F23 from './Components/F23.png';
+import F24 from './Components/F24.png';
+import F25 from './Components/F25.png';
+import F26 from './Components/F26.png';
+import F27 from './Components/F27.png';
+import F28 from './Components/F28.png';
+import F29 from './Components/F29.png';
+import F30 from './Components/F30.png';
+import F31 from './Components/F31.png';
+import F32 from './Components/F32.png';
+import F33 from './Components/F33.png';
+import F34 from './Components/F34.png';
+import F35 from './Components/F35.png';
+import F36 from './Components/F36.png';
+import F37 from './Components/F37.png';
+import F38 from './Components/F38.png';
+import F39 from './Components/F39.png';
+import F40 from './Components/F40.png';
+import F41 from './Components/F41.png';
+import F42 from './Components/F42.png';
+import F43 from './Components/F43.png';
+import F44 from './Components/F44.png';
+import F45 from './Components/F45.png';
+import F46 from './Components/F46.png';
+import F47 from './Components/F47.png';
+import F48 from './Components/F48.png';
+import F49 from './Components/F49.png';
+import F50 from './Components/F50.png';
+import F51 from './Components/F51.png';
+import F52 from './Components/F52.png';
+import F53 from './Components/F53.png';
+import F54 from './Components/F54.png';
+import F55 from './Components/F55.png';
+import F56 from './Components/F56.png';
+import F57 from './Components/F57.png';
+import F58 from './Components/F58.png';
+import F59 from './Components/F59.png';
+import F60 from './Components/F60.png';
+import F61 from './Components/F61.png';
+import F62 from './Components/F62.png';
+import F63 from './Components/F63.png';
+import F64 from './Components/F64.png';
+import F65 from './Components/F65.png';
+import F66 from './Components/F66.png';
+import F67 from './Components/F67.png';
+import F68 from './Components/F68.png';
+import F69 from './Components/F69.png';
+import F70 from './Components/F70.png';
+import F71 from './Components/F71.png';
+import F72 from './Components/F72.png';
+import F73 from './Components/F73.png';
+import F74 from './Components/F74.png';
+import F75 from './Components/F75.png';
+import F76 from './Components/F76.png';
+import F77 from './Components/F77.png';
+import F78 from './Components/F78.png';
+import F79 from './Components/F79.png';
+import F80 from './Components/F80.jpg';
+
 import correctAudio from './Components/correct.mp3'
 import incorrectAudio from './Components/wrong.wav'
 import skipAudio from './Components/skip.wav'
@@ -196,81 +208,86 @@ constructor(props){
     //capital = name of country capital
 
     images:[
-    {value:usa, id:'united states of america',hint:'The land of the free.', flag:Fusa, capital:'Washington, D.C.'},
-    {value:canada, id:'canada',hint:'Maple syrup.',flag:Fcanada, capital:'Ottawa'},
-    {value:china, id:'china',hint:'Most populous country.',flag:Fchina, capital:'Beijing'},
-    {value:australia, id:'australia',hint:'Kangaroos.',flag:Faustralia, capital:'Canberra'},
-    {value:india, id:'india',hint:'Bollywood.',flag:Findia, capital:'New Dehli'},
-    {value:uk, id:'united kingdom',hint:'Shakespeare.',flag:Fuk, capital:'London'},
-    {value:russia, id:'russia',hint:'Vodka and Communism.',flag:Frussia, capital:'Moscow'},
-    {value:italy, id:'italy',hint:'Pizza.',flag:Fitaly, capital:'Rome'},
-    {value:mexico, id:'mexico',hint:'Sombrero.',flag:Fmexico, capital:'Mexico City'},
-    {value:france, id:'france',hint:'Eiffel Tower.',flag:Ffrance, capital:'Paris'},
-    {value:germany, id:'germany',hint:'Lost two World wars.',flag:Fgermany, capital:'Berlin'},
-    {value:brazil, id:'brazil',hint:'Amazon rainforest.',flag:Fbrazil, capital:'Brasilia'},
-    {value:spain, id:'spain',hint:'Running with the bulls.',flag:Fspain, capital:'Madrid'},
-    {value:egypt, id:'egypt',hint:'Pyramids.',flag:Fegypt, capital:'Cairo'},
-    {value:japan, id:'japan',hint:'Anime and robots.',flag:Fjapan, capital:'Tokyo'},
-    {value:newzealand, id:'new zealand',hint:'Where Lord of the rings was shot.',flag:Fnewzealand, capital:'Wellington'},
-    {value:pakistan, id:'pakistan',hint:'Separated from India after partition.',flag:Fpakistan, capital:'Islamabad'},
-    {value:iceland, id:'iceland',hint:'Greener than greenland.',flag:Ficeland, capital:'Reykjavik'},
-    {value:norway, id:'norway',hint:'Fjords.',flag:Fnorway, capital:'Oslo'},
-    {value:peru, id:'peru',hint:'Machu Picchu.',flag:Fperu, capital:'Lima'},
-    {value:greece, id:'greece',hint:'Destroyed economy.',flag:Fgreece, capital:'Athens'},
-    {value:denmark, id:'denmark',hint:'Owns Greenland.',flag:Fdenmark, capital:'Copenhagen'},
-    {value:chile, id:'chile',hint:'Andes mountains.',flag:Fchile, capital:'Santiago'},
-    {value:cuba, id:'cuba',hint:'_____ missle crisis.',flag:Fcuba, capital:'Havana'},
-    {value:turkey, id:'turkey',hint:'Thankgiving bird, Hagia Sophia',flag:Fturkey, capital:'Ankara'},
-    {value:indonesia, id:'indonesia',hint:'Largest Muslim Country, Borobudur, Krakatoa',flag:Findonesia, capital:'Jakarta'},
-    {value:southafrica, id:'south africa',hint:'Whitest country in Africa.',flag:Fsouthafrica, capital:'Cape town, Pretoria, Bloemfontein'},
-    {value:finland, id:'finland',hint:'Scared of Russia, least corruption.',flag:Ffinland, capital:'Helsinki'},
-    {value:ireland, id:'ireland',hint:'Leprechaun.',flag:Fireland, capital:'Dublin'},
-    {value:poland, id:'poland',hint:'Victims of WWII.',flag:Fpoland, capital:'Warsaw'},
-    {value:sweden, id:'sweden',hint:'IKEA.',flag:Fsweden, capital:'Stockholm'},
-    {value:israel, id:'israel',hint:'Claimed by three religions.',flag:Fisrael, capital:'Jerusalem'},
-    {value:iran, id:'iran',hint:'Persia.',flag:Firan, capital:'Tehran'},
-    {value:nepal, id:'nepal',hint:'Himalayan Mountains.',flag:Fnepal, capital:'Kathmandu'},
-    {value:madagascar, id:'madagascar',hint:'Penguins of ____.',flag:Fmadagascar, capital:'Antananarivo'},
-    {value:iraq, id:'iraq',hint:'isIs.',flag:Firaq, capital:'Baghdad'},
-    {value:syria, id:'syria',hint:'isiS.',flag:Fsyria, capital:'Damascus'},
-    {value:phillipines, id:'phillipines',hint:'Roasted whole pig and balut.',flag:Fphillipines, capital:'Manila'},
-    {value:vietnam, id:'vietnam',hint:'Only country to beat the US in war.',flag:Fvietnam, capital:'Hanoi'},
-    {value:thailand, id:'thailand',hint:'*Above your knee*-land.',flag:Fthailand, capital:'Bangkok'},
-    {value:northkorea, id:'north korea',hint:'Kim Jong Un.',flag:Fnorthkorea, capital:'Pyongyang'},
-    {value:portugal, id:'portugal',hint:"Origin of Brazil's language.",flag:Fportugal, capital:'Lisbon'},
-    {value:argentina, id:'argentina',hint:'Football.',flag:Fargentina, capital:'Buenos Aires'},
-    {value:romania, id:'romania',hint:'Vampires and gypsies.',flag:Fromania, capital:'Bucharest'},
-    {value:ukraine, id:'ukraine',hint:'Chernobyl disaster.',flag:Fukraine, capital:'Kiev/Kyiv'},
-    {value:southkorea, id:'south korea',hint:'K-Pop.',flag:Fsouthkorea, capital:'Seoul'},
-    {value:austria, id:'austria',hint:'Archduke Franz Ferdinand.', flag:Faustria, capital:'Vienna'},
-    {value:switzerland, id:'switzerland',hint:'Neutral in any conflict.',flag:Fswitzerland, capital:'Berne (Unofficial)'},
-    {value:malaysia, id:'malaysia',hint:'Lost plane in the Indian ocean.',flag:Fmalaysia, capital:'Kuala Lumpur'},
-    {value:venezuela, id:'venezuela',hint:'Inflated currency. Corruption.',flag:Fvenezuela, capital:'Caracas'},
-    {value:belgium, id:'belgium',hint:'Famous chocolate.',flag:Fbelgium, capital:'Brussels'},
-    {value:mongolia, id:'mongolia',hint:'Genghis Khan.',flag:Fmongolia, capital:'Ulaanbaatar'},
-    {value:jamaica, id:'jamaica',hint:'Bob Marley.',flag:Fjamaica, capital:'Kingston'},
-    {value:panama, id:'panama',hint:'Canal that connects oceans.',flag:Fpanama, capital:'Panama City'},
-    {value:afghanistan, id:'afghanistan',hint:'Taliban.',flag:Fafghanistan, capital:'Kabul'},
-    {value:vaticancity, id:'vatican city',hint:'The Pope.',flag:Fvaticancity, capital:"Vatican City"},
-    {value:haiti, id:'haiti',hint:'Earthquakes and Tsunamis.',flag:Fhaiti, capital:'Port-au-Prince'},
-    {value:hungary, id:'hungary',hint:'What happens when you do not eat for a while.',flag:Fhungary, capital:'Budapest'},
-    {value:saudiarabia, id:'saudi arabia',hint:'Desert and Oil.',flag:Fsaudiarabia, capital:'Riyadh'},
-    {value:srilanka, id:'sri lanka',hint:'The teardrop of Asia.',flag:Fsrilanka, capital:'Colombo, Sri Jayawardenepura Kotte'},
-    {value:bangladesh, id:'bangladesh',hint:'Eastern Pakistan.',flag:Fbangladesh, capital:'Dhaka'},
-    {value:macedonia, id:'macedonia',hint:'Alexander The Great.',flag:Fmacedonia, capital:'Skopje'},
-    {value:ethiopia, id:'ethiopia',hint:'Haile Selassie, Messiah of Rastafarianism.',flag:Fethiopia, capital:'Addis Ababa'},
-    {value:netherlands, id:'netherlands',hint:'All drugs are legal.',flag:Fnetherlands, capital:'Amsterdam'},
-    {value:unitedarabemirates, id:'united arab emirates',hint:'Tallest skyscraper.',flag:Fuae, capital:'Abu Dhabi'},
-    {value:armenia, id:'armenia',hint:'Turkey committed genocide on these people.',flag:Farmenia, capital:'Yerevan'},
-    {value:kazakhstan, id:'kazakhstan',hint:'Borat.',flag:Fkazakhstan, capital:'Nur-Sultan'},
-    {value:somalia, id:'somalia',hint:'Modern pirates.',flag:Fsomalia, capital:'Mogadishu'},
-    {value:colombia, id:'colombia',hint:'Cocaine.',flag:Fcolombia, capital:'Bogota'},
-    {value:tanzania, id:'tanzania',hint:'Mount Kilimanjaro.',flag:Ftanzania, capital:'Dodoma'},
-    {value:cambodia, id:'cambodia',hint:'Angkor Wat.',flag:Fcambodia, capital:'Phnom Penh'},
-    {value:tunisia, id:'tunisia',hint:'Carthage.',flag:Ftunisia, capital:'Tunis'},
-    {value:mali, id:'mali',hint:'Great Mosque of Djenné, Mansa Musa.',flag:Fmali, capital:'Bamako'},
-    {value:cyprus, id:'cyprus',hint:'Ukraine claims this island as their own.',flag:Fcyprus, capital:'Nicosia'},
-    {value:winner,id:'hazel',hint:"There's no hint if you've already won!",flag:allFlag, capital:'Please stop'},
+    {value:O1, flag:F1},
+    {value:O2, flag:F2},
+    {value:O3, flag:F3},
+    {value:O4, flag:F4},
+    {value:O5, flag:F5},
+    {value:O6, flag:F6},
+    {value:O7, flag:F7},
+    {value:O8, flag:F8},
+    {value:O9, flag:F9},
+    {value:O10, flag:F10},
+    {value:O11, flag:F11},
+    {value:O12, flag:F12},
+    {value:O13, flag:F13},
+    {value:O14, flag:F14},
+    {value:O15, flag:F15},
+    {value:O16, flag:F16},
+    {value:O17, flag:F17},
+    {value:O18, flag:F18},
+    {value:O19, flag:F19},
+    {value:O20, flag:F20},
+    {value:O21, flag:F21},
+    {value:O22, flag:F22},
+    {value:O23, flag:F23},
+    {value:O24, flag:F24},
+    {value:O25, flag:F25},
+    {value:O26, flag:F26},
+    {value:O27, flag:F27},
+    {value:O28, flag:F28},
+    {value:O29, flag:F29},
+    {value:O30, flag:F30},
+    {value:O31, flag:F31},
+    {value:O32, flag:F32},
+    {value:O33, flag:F33},
+    {value:O34, flag:F34},
+    {value:O35, flag:F35},
+    {value:O36, flag:F36},
+    {value:O37, flag:F37},
+    {value:O38, flag:F38},
+    {value:O39, flag:F39},
+    {value:O40, flag:F40},
+    {value:O41, flag:F41},
+    {value:O42, flag:F42},
+    {value:O43, flag:F43},
+    {value:O44, flag:F44},
+    {value:O45, flag:F45},
+    {value:O46, flag:F46},
+    {value:O47, flag:F47},
+    {value:O48, flag:F48},
+    {value:O49, flag:F49},
+    {value:O50, flag:F50},
+    {value:O51, flag:F51},
+    {value:O52, flag:F52},
+    {value:O53, flag:F53},
+    {value:O54, flag:F54},
+    {value:O55, flag:F55},
+    {value:O56, flag:F56},
+    {value:O57, flag:F57},
+    {value:O58, flag:F58},
+    {value:O59, flag:F59},
+    {value:O60, flag:F60},
+    {value:O61, flag:F61},
+    {value:O62, flag:F62},
+    {value:O63, flag:F63},
+    {value:O64, flag:F64},
+    {value:O65, flag:F65},
+    {value:O66, flag:F66},
+    {value:O67, flag:F67},
+    {value:O68, flag:F68},
+    {value:O69, flag:F69},
+    {value:O70, flag:F70},
+    {value:O71, flag:F71},
+    {value:O72, flag:F72},
+    {value:O73, flag:F73},
+    {value:O74, flag:F74},
+    {value:O75, flag:F75},
+    {value:O76, flag:F76},
+    {value:O77, flag:F77},
+    {value:O78, flag:F78},
+    {value:O79, flag:F79},
+    {value:O80, flag:F80},
     ]
 	};
 
@@ -361,8 +378,8 @@ onSkip method is used when the user skips
   The total skips the user uses throughout the entire game is displayed on the left side (skipTotal)
 */
   onSkip(){
-       if(this.state.rank!==74){
-       	if (this.state.rank === 73){
+       if(this.state.rank!==79){
+       	if (this.state.rank === 78){
       		this.handleAudio(winnerAudio);
       	}else{
       		{this.state.mute === false ? this.handleAudio(skipAudio) : null};
@@ -411,7 +428,7 @@ onGuess method is used when the user enters an answer
     through each country seamlessly 
 */
 onGuess(){
-  if(this.state.rank!==74){
+  if(this.state.rank!==79){
   //this.setState({rank:this.state.rank+1});
 
   //if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
@@ -419,7 +436,7 @@ onGuess(){
       
     this.setState({points:this.state.points+this.state.add});
       
-    if (this.state.rank === 73){
+    if (this.state.rank === 78){
     	this.handleAudio(winnerAudio);
     }else{
     	{this.state.mute === false ? this.handleAudio(correctAudio) : null};
