@@ -189,23 +189,20 @@ constructor(props){
     wrongTotal:0,    //keep track of the total times the uder guessed wrong
     hintS:'s',       //used to change hintTotal when its singular
     skipS:'s',       //used to change skipTotal when its singular
-    val:"",			 //value of the input
+    val:"",			     //value of the input
     shouldRender:false,          
     hintText:null,   //text of the hint
     capitalText:null,//text of the capital hint
-    muteText:"MUTE",
+    muteText:"MUTE", //Mute text will change to 'unmute' when pressed
     mute:false,
-    countries: [],
+    countries: [],   //List that contains the data from the database
     points:0,        //keep track of user's total points
     add:4,           //keep track of potential points on right answer (lowers as you hint)
     flag:null,       //keep track of the flag for each respective country
 
-    //Images = dictionary that holds the data for the respective country 
-    //Value = name of the country outline
-    //Id = text name to match the input
-    //Hint = text displayed for general hint
-    //flag = name of the country flag
-    //capital = name of country capital
+    //Images = dictionary that holds the image data for the respective country 
+    //Value = name of the country outline image
+    //flag = name of the country flag image
 
     images:[
     {value:O1, flag:F1},
