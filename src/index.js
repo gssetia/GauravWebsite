@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import BrainMapper from './BrainMapper';
 import Home from './Home';
-import About from './About';
-import Contact from './Contact';
+
 import Error from './Error';
 import Navigation from './Navigation';
 import './index.css';
@@ -27,12 +26,11 @@ class App extends React.Component {
           <Navigation/>
           <Switch>
             <Route path = "/" component = {Home} exact/>
-            <Route path = "/apps" component = {BrainMapper}/>
-            <Route path = "/about" component = {About}/>
-            <Route path = "/contact" component = {Contact}/>
+            <Route path = "/brainmapper" component = {BrainMapper}/>
             <Route component = {Error}/>
           </Switch>
         </BrowserRouter> 
+        
       </div>
       
       );

@@ -2,8 +2,13 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components'
 import { fadeIn } from 'react-animations'
 import './index.css';
+import About from './About';
+import Apps from './Apps';
+import Contact from './Contact';
+import { Container } from 'react-bootstrap';
+import logo from './Components/University-of-Toronto-01.svg';
 
-const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`}`;
+const FadeIn = styled.div`animation: 4s ${keyframes`${fadeIn}`}`;
 
 
 export default class Home extends React.Component {
@@ -20,18 +25,47 @@ export default class Home extends React.Component {
 		
 	render(){
 		return(
-				<body>
+			<div>
+				<div className = "container" id = 'home'>
 				
-				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+					<div className = 'row justify-content-center home'> 
+						<div className = 'col-3'>
+							<div className = 'Gaurav'></div>
+						</div>
+						<div className = 'col-7'>
+							<FadeIn>
+								<h2 className = 'intro'> 
+									<span className = 'welcome'>Welcome to my Website!</span><br></br><br></br>
+									<span className = 'name'>My name is Gaurav Setia</span><br></br>
+									<span className = 'homeContent'> Software Engineer at the</span>
+									<img className = 'uoftlogo' src = {logo} ></img>
+									
+								</h2>
+							</FadeIn>
+						</div>
+					</div>
+					
+					<hr className = 'divider' id = 'about'/>
+
+					<div className = '' >
+						<About/>
+					</div>
+					<hr className = 'divider' id = 'apps'/>
+					<div >
+						<Apps/>
+					</div>
+					<hr className = 'divider' id = 'contact'/>
+					<div className = 'rows' >
+						<Contact/>
+					</div>
+					<hr className = 'divider'/>
+				</div>
+
 				
-				<div className = 'Gaurav'>
-				 </div>
-				<FadeIn>
-				<h2 className = 'intro'> <span className = 'welcome'>Welcome to my Website!</span><br></br><br></br>
-				<span className = 'name'>Gaurav Setia</span><br></br>
-				<span className = 'homeContent'> Computer Programmer <br></br>at the University of <br></br>Toronto </span> </h2>
-				</FadeIn>
-				</body>
+					
+				
+			</div>
 			);
 	}
 }

@@ -1,59 +1,42 @@
 import React from 'react';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import ReactDOM from 'react-dom';
-import { fadeIn } from 'react-animations'
-import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
+import github from './Components/github.svg';
+import linkedin from './Components/linkedin.png';
 
 const FadeIn = styled.div`animation: 2s ${keyframes`${fadeIn}`}`;
 
 export default class Contact extends React.Component {
-
-	constructor(){
-	super();
-	this.state= {
-			value: 'gaurav.singh.setia@gmail.com',
-			copied: false,
-		};
-			
-	}
-	myFunction() {
-		var copyText = "gaurav.singh.setia@gmail.com";
-		copyText.select();
-		copyText.setSelectionRange(0, 99999);
-		document.execCommand("copy");
-			
-		var tooltip = document.getElementById("myTooltip");
-		tooltip.innerHTML = "Copied: " + copyText.value;
-	}
-		  
-	outFunc() {
-		var tooltip = document.getElementById("myTooltip");
-		tooltip.innerHTML = "Copy to clipboard";
-	}
-
+	
 	render(){
 		return(
 				<div>
-					<div className='contactContainer'>
-					<h1 className ='contactTitle'> Reach out to me </h1>
-						<FadeIn>
-        				<ul className='contactContent'> 
-        				<div><a target="_blank" href="https://www.linkedin.com/in/gauravdeep-setia/">LinkedIn</a></div><br></br>
-        				<div><a target="_blank" href="https://github.com/gssetia">GitHub</a></div><br></br>
-						<div class="tooltip">
-						<CopyToClipboard text={this.state.value}
-							onCopy={() => this.setState({copied: true})}>
-							<button>
-							<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-							Email
-							</button>
-						</CopyToClipboard>
-  							{this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
-  							
+					<div className='row justify-content-center'>
+					
+						<h1> Reach out to me </h1>
+					</div>
+					<div className='row justify-content-center largeSpace'>
+							
+						<div className='col-3 centerContact'>
+							
+							<a target="_blank" href="https://www.linkedin.com/in/gauravdeep-setia/">
+								<img height='60' width='60' src={linkedin}></img>
+								<div className ='centerContract'>LinkedIn</div>
+								</a>
 						</div>
-						</ul>
-        				</FadeIn>
-        			</div>
+
+						<div className='col-3 centerContact'><a target="_blank" href="https://github.com/gssetia">
+							<img height='60' width='60' src={github}></img>
+							<div className ='centerContract'>GitHub</div>
+							</a>
+						</div>
+					
+      				</div>		
+					<div className='row justify-content-center largeSpace largerSpace'>
+						<a href="mailto:gaurav.singh.setia@gmail.com">
+							<button className="col-0 centerContract w3-button w3-black">Email Me</button>
+						</a>
+					</div>		
 				</div>
 
 			);
