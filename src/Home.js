@@ -26,10 +26,10 @@ export default class Home extends React.Component {
 	render(){
 		return(
 			<div>
-				<div className = "container" id = 'home'>
+				<div className = "container" >
 				
 					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-					<div className = 'row justify-content-center home'> 
+					<div id = '1' className = 'row justify-content-center home'> 
 						<div className = 'col-3'>
 							<div className = 'Gaurav'></div>
 						</div>
@@ -46,17 +46,17 @@ export default class Home extends React.Component {
 						</div>
 					</div>
 					
-					<hr className = 'divider' id = 'about'/>
+					<hr className = 'divider' />
 
-					<div className = '' >
+					<div id = '2' className = '' >
 						<About/>
 					</div>
-					<hr className = 'divider' id = 'apps'/>
-					<div >
+					<hr className = 'divider' />
+					<div id = '3' >
 						<Apps/>
 					</div>
-					<hr className = 'divider' id = 'contact'/>
-					<div className = 'rows' >
+					<hr className = 'divider' />
+					<div id = '4' className = 'rows' >
 						<Contact/>
 					</div>
 					<hr className = 'divider'/>

@@ -9,29 +9,26 @@ body {
 
 /*Navigation*/
 
-.navBarButtons{
-  margin-top:5.5vh;
-}
-
-.navBar{
-  position:absolute;
-  max-width: 11%;
-}
-
-.Navb{
-  margin-bottom:70px;
-}
-
 .navImgSpace{
   margin-right:5px;
 }
 
-.navSpace{
-  margin-left:15px;
+.navBeginning{
+  margin-left:50px;
+  margin-right:15px;
 }
 
-.bruh{
-  margin-left:100px;
+.navbarClass{
+  background-color:rgb(190, 184, 184);
+  color:white;
+}
+
+.navSpace{
+  margin: 0 15px;
+}
+
+.isCurrent{
+  background-color:rgb(124, 121, 121);
 }
 
 .divider{

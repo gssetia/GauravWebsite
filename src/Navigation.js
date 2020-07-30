@@ -2,63 +2,81 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import resume from './Components/Resume.pdf';
-import Scrollspy from 'react-scrollspy';
+import ScrollspyNav from 'react-scrollspy-nav';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button, Form, FormControl } from 'react-bootstrap';
 
 
 export default class Navigation extends React.Component {
 	render(){
 		return(
-      
-      // <body className='Navb' data-spy="scroll" data-target='#navb' data-offset='50'>
-      //   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-      //   <Navbar  expand="lg" fixed="top" bg='light'>
-      //     {/* <Navbar.Brand href="#home">Gaurav Setia</Navbar.Brand> */}
-      //     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      //     <Navbar.Collapse id="basic-navbar-nav">
-      //       <Nav className="mr-auto">
-      //         <Nav.Link href="#home"><i className="fa fa-home w3-large navSpace navImgSpace"></i>Home</Nav.Link>
-      //         <Nav.Link href="#about"><i className="fa fa-user w3-large navSpace navImgSpace"></i>About</Nav.Link>
-      //         <Nav.Link href="#apps"><i className="fa fa-star w3-large navSpace navImgSpace"></i>Projects</Nav.Link>
-      //         <Nav.Link href="#contact"><i className="fa fa-envelope w3-large navSpace navImgSpace"></i>Contact</Nav.Link>
-      //       </Nav>
-      //       <Form inline>
-      //         <a href={resume} download>
-      //           <Button variant="outline-success">Resume (.pdf)</Button>
-      //         </a>
-      //       </Form>
-      //     </Navbar.Collapse>
-      //   </Navbar>
-      // </body>
+
+      <body>
+        <style type="text/css">
+          {`
+          .btn-flat {
+            background-color: black;
+            color: white;
+          }
+          .btn-flat:hover{
+            color: grey;
+          }
+          `}
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <Navbar className ="navbarClas" variant='dark' bg='dark' expand="md" fixed="top">
+        
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto okay">
+              <div className='navBeginning'></div>
+              <Nav.Link className ='navSpace active' href="#1"><i className="fa fa-home w3-large navImgSpace"></i>Home</Nav.Link>
+              <Nav.Link className ='navSpace active' href="#2"><i className="fa fa-user w3-large navImgSpace"></i>About</Nav.Link>
+              <Nav.Link className ='navSpace active' href="#3"><i className="fa fa-star w3-large navImgSpace"></i>Projects</Nav.Link>
+              <Nav.Link className ='navSpace active' href="#4"><i className="fa fa-envelope w3-large navImgSpace"></i>Contact</Nav.Link>
+            </Nav>
+            <Form inline>
+              <a href={resume} download>
+                <Button variant="flat">Resume (.pdf)</Button>
+              </a>
+            </Form>
+          </Navbar.Collapse>
+        </Navbar>
+        <ScrollspyNav scrollTargetIds={["1", "2", "3", "4"]} activeNavClass='isCurrent'></ScrollspyNav>
+      </body>
 
 
 
 
-
-        <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-default fixed-top">  
-          <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Apps</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-            <form className="form-inline">
-              <a className="nav-link" href="#">Resume</a>
-            </form>
-          </div>
-        </nav>
+      // <body data-spy="scroll" data-target='#Content' data-offset='0'>
+      //   <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-default fixed-top">  
+      //     <button className="navbar-toggler" data-toggle="collapse" data-target="#Content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      //       <span className="navbar-toggler-icon"></span>
+      //     </button>
+          
+      //     <div className="collapse navbar-collapse" >
+      //       <ul className="navbar-nav mr-auto" id="Content">
+      //       {/* <Scrollspy className='scrollspy' items={['1','2', '3', '4']} currentClassName='isCurrent'> */}
+      //         <li className="nav-item">
+      //           <a className="nav-link" href="#1">Home </a>
+      //         </li>
+      //         <li className="nav-item">
+      //           <a className="nav-link" href="#2">About</a>
+      //         </li>
+      //         <li className="nav-item">
+      //           <a className="nav-link" href="#3">Apps</a>
+      //         </li>
+      //         <li className="nav-item">
+      //           <a className="nav-link" href="#4">Contact</a>
+      //         </li>
+      //         {/* </Scrollspy> */}
+      //       </ul>
+      //       <form className="form-inline">
+      //         <a className="nav-link" href="#">Resume</a>
+      //       </form>
+      //     </div>
+          
+      //   </nav>
+      //   </body>
         
       /* <body className="w3-white">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
