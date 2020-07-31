@@ -43,7 +43,9 @@ body {
   font-weight: bold;
   font-size:3.7vw;
 }
-
+.topOfPage{
+  margin-top:50px;
+}
 .name{
   font-weight: bold;
   font-size:3vw;
@@ -66,16 +68,15 @@ body {
 
 }
 
-.Gaurav{
-  background-image:url("Components/gss.jpeg");
-  background-position:center;
-  background-size:cover;
+.gs{
   height:20vw;
   width:20vw;
   background-position-x: left;
   border-radius:250px;
   border-color:black;
   border-style:solid;
+  object-fit: cover;
+  object-position: -2vw 0px;
 }
 
 /*Layout*/

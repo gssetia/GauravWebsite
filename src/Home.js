@@ -7,6 +7,7 @@ import Apps from './Apps';
 import Contact from './Contact';
 import { Container } from 'react-bootstrap';
 import logo from './Components/University-of-Toronto-01.svg';
+import gs from './Components/gss.jpeg';
 
 const FadeIn = styled.div`animation: 4s ${keyframes`${fadeIn}`}`;
 
@@ -29,11 +30,11 @@ export default class Home extends React.Component {
 				<div className = "container" >
 				
 					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-					<div id = '1' className = 'row justify-content-center home'> 
-						<div className = 'col-3'>
-							<div className = 'Gaurav'></div>
+					<div id = '1' className = 'topOfPage row justify-content-center home'> 
+						<div className = 'col-md-3 col-sm-12 centerContact'>
+							<img className = 'gs' src = {gs} ></img>
 						</div>
-						<div className = 'col-7'>
+						<div className = 'col-md-7 col-sm-12'>
 							<FadeIn>
 								<h2 className = 'intro'> 
 									<span className = 'welcome'>Welcome to my Website!</span><br></br><br></br>
@@ -46,19 +47,21 @@ export default class Home extends React.Component {
 						</div>
 					</div>
 					
-					<hr className = 'divider' />
-
-					<div id = '2' className = '' >
+					<div id = '2'>
+						<hr className = 'divider' />
 						<About/>
 					</div>
-					<hr className = 'divider' />
-					<div id = '3' >
+
+					<div id = '3'>
+						<hr className = 'divider' />
 						<Apps/>
 					</div>
+					
+					<div id = '4'>
 					<hr className = 'divider' />
-					<div id = '4' className = 'rows' >
 						<Contact/>
 					</div>
+					
 					<hr className = 'divider'/>
 				</div>
 
