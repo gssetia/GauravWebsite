@@ -175,9 +175,9 @@ input[type=text]:focus{
 }
 
 .wrongTotal {
-  /* position:absolute;
-  left:12%;
-  top:50%; */
+  /* position:absolute; */
+  /* left:12%; */
+  /* top:50%; */
   font-size: 22px;
   color:white;
 }
@@ -196,7 +196,7 @@ input[type=text]:focus{
 }
 
 .dot {
-  /* position:absolute;*/
+  /* position:absolute; */
   display:inline-block;
   height: 25px;
   width: 25px;
@@ -248,6 +248,7 @@ input[type=text]:focus{
 }
 
 .pointsTitle{
+/* position:fixed; */
 left:13%;
 bottom:1%;
 color:white;
@@ -259,6 +260,7 @@ color:white;
   color:black;
   padding-left: 5px;
   padding-right: 5px;
+  /* position:fixed; */
   bottom:1%;
   left:30%;
 }
@@ -276,7 +278,7 @@ color:white;
 
 .capitalText {
   /* position: absolute; */
-  background-color:none;
+  background-color: none;
   max-width: 18%;
   padding: 10px;
   /* right:7%;
@@ -297,6 +299,7 @@ color:white;
 .skip{
   outline:none;
   border-radius:10px;
+  /* position:fixed; */
   padding:8px;
   border-color:black;
   background-color:yellow;
@@ -322,7 +325,7 @@ color:white;
 .hint {
   outline: none;
   border-radius:10px;
-  /* position:fixed; */
+  /* position: fixed; */
   margin-left: 69%;
   padding:8px;
   border-color:black;

@@ -17,6 +17,12 @@ export default class Layout extends React.Component {
 					shouldR:false
 				});
 			}
+
+		rulesShown = () => {
+				this.setState({
+					shouldR:true
+				});
+			}
 		
 	render(){
 		return(
@@ -24,7 +30,9 @@ export default class Layout extends React.Component {
 				
 				<div className = 'col-6'>
 					<h1 className="styles1"> Brain Mapper! <br/>
-						<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a>  
+						<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a> 
+						
+						<a className = "startreset" onClick= {this.props.onRules} > Rules </a> 
 					</h1>
 				</div>
 			

@@ -10,16 +10,23 @@ export default class Apps extends React.Component {
         super();
         this.state= {
          progress:"0%",
+         position:"fixed",
+         display:"none",
                 };	
             }
         
     openNav = () =>{
         this.setState({progress:"100%"});
-          
+        setTimeout(() => {
+            this.setState({display:"initial"});
+            this.setState({position:"fixed"});
+          }, 200);
+        
     }
     closeNav = () =>{
         this.setState({progress:"0%"});
-        
+        this.setState({position:"absolute"});
+        this.setState({display:"none"});
     }
 
 	render(){
@@ -28,7 +35,7 @@ export default class Apps extends React.Component {
                     <div style={{width: this.state.progress}} class="overlay">
                         <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
                         <div class="overlay-content">
-                            <Game/>
+                            <Game display= {this.state.display} position={this.state.position}/>
                         </div>
                     </div>
                     <div className = 'row justify-content-center largerSpace'>

@@ -193,6 +193,7 @@ constructor(props){
     capitalText:null,//text of the capital hint
     muteText:"MUTE", //Mute text will change to 'unmute' when pressed
     mute:false,
+    position:"fixed",
     countries: [],   //List that contains the data from the database
     points:0,        //keep track of user's total points
     add:4,           //keep track of potential points on right answer (lowers as you hint)
@@ -290,6 +291,7 @@ constructor(props){
     this.handleChange = this.handleChange.bind(this); 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.onRules = this.onRules.bind(this);
     this.onGuess = this.onGuess.bind(this);
     this.onHint = this.onHint.bind(this);
     this.onSkip = this.onSkip.bind(this);
@@ -385,6 +387,14 @@ onSkip method is used when the user skips
       }
   }
 
+  /*
+onRules method is used when the user wants to read the rules
+*/
+onRules(){
+  this.setState({reset:"Resume"});
+  this.setState({shouldRender:false});
+  this.layoutElement.current.rulesShown();
+}
 /*
 onClick method is used when the user starts the game and when the user resets.
   every state is set to its default / null 
@@ -483,9 +493,10 @@ handleAudio(audioFile){
         ref = {this.layoutElement}
         reset={this.state.reset} 
         onClick={this.onClick}
+        onRules={this.onRules}
         />
         
-        {this.state.shouldRender ? <Header onMute = {this.onMute} muteText = {this.state.muteText} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
+        {this.state.shouldRender ? <Header display = {this.props.display} position = {this.props.position} onMute = {this.onMute} muteText = {this.state.muteText} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
       
       </div>
 
