@@ -27,7 +27,7 @@ export default class Home extends React.Component {
 	render(){
 		return(
 			<div>
-				<div className = "container" >
+				<div className = "container">
 				
 					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 					<div id = '1' className = 'topOfPage row justify-content-center home'> 

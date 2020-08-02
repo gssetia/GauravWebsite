@@ -49,13 +49,9 @@ body {
 .name{
   font-weight: bold;
   font-size:3vw;
-  /* border-bottom:6px solid black; */
-  /* border-radius:8px; */
 }
 .uoftlogo{
   height:18vw;
-  /* margin-left:10vw; */
-
 }
 .home{
   padding-top:8vw;
@@ -108,7 +104,6 @@ body {
   font-size: 24px;
   font-weight: bold;
   line-height: 50px;
-  width: 340px;
   border-width:20px;
   border-radius:10px;
   text-align:center;
@@ -121,9 +116,8 @@ body {
 
 /*Header*/
 .input{
-  position: absolute;
   width:29%;
-  position:fixed;  
+  /* position:fixed;   */
   text-align: center;
   bottom:2%;
   right:34.1%;
@@ -147,7 +141,7 @@ input[type=text]:focus{
 .mute{
   outline:none;
   border-radius:10px;
-  position:fixed;
+  /* position:fixed; */
   padding:8px;
   border-color:black;
   background-color:black;
@@ -166,41 +160,43 @@ input[type=text]:focus{
 }
 
 .skipTotal {
-  position:absolute;
+  /* position:absolute;
   left:12%;
-  top:36%;
+  top:36%; */
   font-size: 22px;
+  color:white;
 }
 .hintTotal {
-  position:absolute;
+  /* position:absolute;
   left:12%;
-  top:43%;
+  top:43%; */
   font-size: 22px;
-
+  color:white;
 }
 
 .wrongTotal {
-  position:absolute;
+  /* position:absolute;
   left:12%;
-  top:50%;
+  top:50%; */
   font-size: 22px;
+  color:white;
 }
 
 .img {
-  position:absolute;
+  /* position:absolute; */
   height:auto;
   width:auto;
   max-height: 280px;
   max-width: 350px;
 
-  right: 50%;
+  /* right: 50%;
   left: 50%;
   transform:translate(-50%, -50%);
-  margin-top:27%;  
+  margin-top:27%;   */
 }
 
 .dot {
-  position:absolute;
+  /* position:absolute;*/
   display:inline-block;
   height: 25px;
   width: 25px;
@@ -209,12 +205,12 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
-  right:12%;
-  top:24.5%;
+  /* right:12%;
+  top:24.5%; */
 }
 
 .dot2 {
-  position:absolute;
+  /* position:absolute;*/
   display:inline-block;
   height: 25px;
   width: 25px;
@@ -223,13 +219,13 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
-  right:9%;
-  top:24.5%;
+  /* right:9%;
+  top:24.5%; */
 }
 
 .dot3 {
-  position:absolute;
-  display:inline-block;
+  /* position:absolute;*/
+  display:inline-block; 
   height: 25px;
   width: 25px;
   background-color: #66ff33;
@@ -237,24 +233,24 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
-  right:6%;
-  top:24.5%;
+  /* right:6%;
+  top:24.5%; */
 }
 
 .flag{
-  position:absolute;
+  /* position:absolute; */
   height:auto;
-  right:7%;
-  bottom:27%;
+  /* right:7%;
+  bottom:27%; */
   max-width: 240px;
   width:auto;
   max-height: 170px;
 }
 
 .pointsTitle{
-position:fixed;
 left:13%;
 bottom:1%;
+color:white;
 }
 
 .pointText{
@@ -263,29 +259,30 @@ bottom:1%;
   color:black;
   padding-left: 5px;
   padding-right: 5px;
-  position:fixed;
   bottom:1%;
   left:30%;
 }
 
 .hintText{
-  position: absolute;
-  background-color: #0c8dff;
+  /* position: absolute; */
+  background-color: none;
   max-width: 18%;
   padding: 10px;
-  right:7%;
+  /* right:7%; */
   font: 20px "Times New Roman", Futura, Serif;
   bottom: 54%;
+  color:white;
 }
 
 .capitalText {
-  position: absolute;
-  background-color: #0c8dff;
+  /* position: absolute; */
+  background-color:none;
   max-width: 18%;
   padding: 10px;
-  right:7%;
-  bottom:15%;
+  /* right:7%;
+  bottom:15%; */
   font: 20px "Times New Roman", Futura, Serif;
+  color:white;
 }
 
 .skip:hover{
@@ -300,7 +297,6 @@ bottom:1%;
 .skip{
   outline:none;
   border-radius:10px;
-  position:fixed;
   padding:8px;
   border-color:black;
   background-color:yellow;
@@ -318,15 +314,15 @@ bottom:1%;
 }
 
 .hintsTitle{
-  right:16%;
+  /* right:16%;
   top:20%;
-  position: absolute;
-
+  position: absolute; */
+  color:white;
 }
 .hint {
   outline: none;
   border-radius:10px;
-  position:fixed;
+  /* position:fixed; */
   margin-left: 69%;
   padding:8px;
   border-color:black;
@@ -408,6 +404,55 @@ bottom:1%;
   text-align: left;
 }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 5%;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
 /*Error*/
 
 .errorMessage{
@@ -423,47 +468,6 @@ bottom:1%;
   position:absolute;
   left:35%;
 }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-
 
 
 

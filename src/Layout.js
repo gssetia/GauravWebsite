@@ -20,35 +20,42 @@ export default class Layout extends React.Component {
 		
 	render(){
 		return(
-				<div>
-
-		<h1 className="styles1"> Brain Mapper!
-		<br/>
-			<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a>  
-        </h1>
-        <FadeIn>
-        {this.state.shouldR ? 
-		<div className = "rules">		
-		<p className = "howtoplay"> How to Play</p>
-		<ol>
-		  <li> Guess the country by only looking at its outline.<br/>The outline is not to scale. </li>
-		  <br/>
-		  <li> You can use the 3 hints provided, however each hint will lower the points you earn from a correct answer by 1. You earn 4 points with no hints used to only 1 point after using all hints. 
-		  <br/>
-		  <br/>
-		    First hint: A Brief Phrase
-		  <br/>
-			Second hint: The Flag 
-		  <br/>
-		  	Third hint: The Capital City </li>
-		  	<br/>
-			<li> If all else fails, you can skip to the next country. Goodluck! </li>
-
-
-		</ol>
-				</div> : null} </FadeIn>
+			<div className='row justify-content-center'>
 				
+				<div className = 'col-6'>
+					<h1 className="styles1"> Brain Mapper! <br/>
+						<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a>  
+					</h1>
 				</div>
+			
+			
+				<div className='row justify-content-center'>
+
+  					<FadeIn className = 'col-md-8 col-sm-12 largeSpace'>
+
+						{ this.state.shouldR ? 
+
+						<div className = "rules">		
+							<p className = "howtoplay"> How to Play</p>
+							<ol className='flex-start'>
+								<li> Guess the country by only looking at its outline.<br/>The outline is not to scale. </li> <br/>
+				
+								<li> You can use the 3 hints provided, however each hint will lower the points you earn from a correct answer by 1. You earn 4 points with no hints used to only 1 point after using all hints. <br/><br/>
+									<ul>
+										<li>A Brief Phrase </li>
+										<li>The Flag </li> 						
+										<li>The Capital City </li> 
+									</ul> 
+								</li> <br/>
+									
+								<li> If all else fails, you can skip to the next country. Goodluck! </li>
+							</ol>
+						</div> 
+						: null} 
+					</FadeIn>
+				</div>
+			</div>
+				
 			);
 	}
 }

@@ -175,7 +175,7 @@ import hintAudio from './Components/hint.wav'
 import winnerAudio from './Components/finish.wav'
 
 
-export default class Tester extends React.Component{
+export default class Game extends React.Component{
 
 constructor(props){
 	super(props);
@@ -187,8 +187,6 @@ constructor(props){
     hintTotal:0,     //keep track of the total times the user used a hint
     skipTotal:0,     //keep track of the total times the user skipped
     wrongTotal:0,    //keep track of the total times the uder guessed wrong
-    hintS:'s',       //used to change hintTotal when its singular
-    skipS:'s',       //used to change skipTotal when its singular
     val:"",			     //value of the input
     shouldRender:false,          
     hintText:null,   //text of the hint
@@ -429,7 +427,7 @@ onGuess(){
   //this.setState({rank:this.state.rank+1});
 
   //if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
-    if(document.getElementById("input").value.trim().toLowerCase() === this.state.countries[this.state.rank].name){  
+    if(document.getElementById("input").value.trim().toLowerCase() === this.state.countries[this.state.rank].name || document.getElementById("input").value.trim().toLowerCase() === this.state.countries[this.state.rank].alt){  
       
       this.setState({points:this.state.points+this.state.add});
       
@@ -478,17 +476,17 @@ handleAudio(audioFile){
     
     return(
 
-      <div>
+      <div className='container'>
       
-
-      <Layout 
-      ref = {this.layoutElement}
-      reset={this.state.reset} 
-      onClick={this.onClick}
-      />
-
-      {this.state.shouldRender ? <Header onMute = {this.onMute} muteText = {this.state.muteText} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} hintS = {this.state.hintS} skipS = {this.state.skipS} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
-
+        
+        <Layout 
+        ref = {this.layoutElement}
+        reset={this.state.reset} 
+        onClick={this.onClick}
+        />
+        
+        {this.state.shouldRender ? <Header onMute = {this.onMute} muteText = {this.state.muteText} capitalText = {this.state.capitalText} wrongTotal = {this.state.wrongTotal} skipTotal = {this.state.skipTotal} hintTotal = {this.state.hintTotal} onSkip={this.onSkip} title={this.state.title} flag={this.state.flag} points={this.state.points} onHint={this.onHint} hintText={this.state.hintText} val={this.state.val} handleChange={this.handleChange} handleSubmit={this.handleSubmit} onGuess={this.onGuess} images = {this.state.images} rank = {this.state.rank} />:null}
+      
       </div>
 
       );

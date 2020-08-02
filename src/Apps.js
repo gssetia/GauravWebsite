@@ -3,19 +3,42 @@ import { NavLink } from "react-router-dom";
 import logo from './Components/brainmapperlogo.png';
 import rover from './Components/rover.jpg';
 import flappybird from './Components/flappy.PNG';
+import Game from './BrainMapper.js'
 
 export default class Apps extends React.Component {
+    constructor(){
+        super();
+        this.state= {
+         progress:"0%",
+                };	
+            }
+        
+    openNav = () =>{
+        this.setState({progress:"100%"});
+          
+    }
+    closeNav = () =>{
+        this.setState({progress:"0%"});
+        
+    }
+
 	render(){
 		return(
 				<div>
+                    <div style={{width: this.state.progress}} class="overlay">
+                        <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
+                        <div class="overlay-content">
+                            <Game/>
+                        </div>
+                    </div>
                     <div className = 'row justify-content-center largerSpace'>
 						<h1 className ='col-md-9 col-sm-12 space appTitle centerContact'> My Projects</h1> 
 					</div>
                     <div className = "row justify-content-center largeSpace largerSpace">
                         <div className='col-md-5 col-sm-12 centerContact'>
-                            <NavLink to = "/brainmapper" className="w3-button">
+                            <a onClick={this.openNav} className="w3-button">
                                     <img className='brainmapperlogo' src = {logo}></img>
-                            </NavLink>
+                            </a>
                         </div>
                         <div className='col-md-5 col-sm-12 centerContact'>
                             <ul className='projectDesc'>
