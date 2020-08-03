@@ -28,12 +28,12 @@ export default class Layout extends React.Component {
 		return(
 			<div className='row justify-content-center'>
 				
-				<div className = 'col-6'>
-					<h1 className="styles1"> Brain Mapper! <br/>
+				<div className = 'col-md-6 col-sm-10'>
+					<div className="styles1"> Brain Mapper! <br/>
 						<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a> 
 						
 						<a className = "startreset" onClick= {this.props.onRules} > Rules </a> 
-					</h1>
+					</div>
 				</div>
 			
 			

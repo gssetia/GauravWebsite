@@ -20,48 +20,45 @@ export default class Header extends React.Component {
       
         return(                 
             
-                <form className = 'row largeSpace justify-content-center' onSubmit={this.props.handleSubmit}>
+                <form className = 'row myrow border largeSpace justify-content-center' onSubmit={this.props.handleSubmit}>
                     
-                    <div className ='col-3 border'>
-					<button type="submit" className="buttonGuess" onClick={this.props.onGuess}>Guess</button>
-					<button className="mute" onClick={this.props.onMute}> {this.props.muteText}</button>
-                        <h2 className="skipTotal"> Skips: {this.props.skipTotal}</h2>
-                        <h2 className="hintTotal"> Hints: {this.props.hintTotal}</h2>
-                        <h2 className="wrongTotal"> Incorrect: {this.props.wrongTotal}</h2>
-                        
+                    <div className ='phone col-lg-2 align-items-stretch col-md-6 col-sm-6 col-5 order-lg-1'>
+						
+						<button type="submit" className="buttonGuess" onClick={this.props.onGuess}>Guess</button>
+						<button className="mute layers" onClick={this.props.onMute}> {this.props.muteText}</button>
+						<span className='sideBar'>
+							<div className="layers"> Skips: {this.props.skipTotal}</div>
+							<div className="layers"> Hints: {this.props.hintTotal}</div>
+							<div className="layers"> Incorrect: {this.props.wrongTotal}</div>
+							<div className="layers points">Points:<span className="pointText">{this.props.points}</span></div>
+						</span>
                     </div>
 
-                    <FadeInLonger className='col-6 border centerContact'>
+					<div className='hints phone col-lg-2 col-md-6 col-sm-6 col-5 order-lg-3'>				
+					
+						<h1 className="hintText">{this.props.hintText}</h1>
+					
+						<img className="flag" src={this.props.flag} width="20" height="25"/>
+
+						<h1 className="capitalText">{this.props.capitalText}</h1>
+					
+					</div>
+
+                    <FadeInLonger className='col-lg-6 col-md-12 col-sm-12 centerContact order-lg-2'>
                         <Pulse>
-                            <img alt="outline" className="img" id = "img" src={this.props.images[this.props.rank].value} alt="Outline of a country"/>
+                            <img alt="outline" className="img imgs" id = "img" src={this.props.images[this.props.rank].value} alt="Outline of a country"/>
                         </Pulse>
                     </FadeInLonger>
 
-                    <div className='col-3'>
-                        <h1 className="hintsTitle">Hints:</h1>
 
-                        <span id = "dot1" class="dot"></span>
-                        <span id = "dot2" class="dot2"></span>
-                        <span id = "dot3" class="dot3"></span>
 
-                        <h1 className="hintText">{this.props.hintText}</h1>
-
-                        <img className="flag" src={this.props.flag} width="20" height="25"/>
-
-                        <h1 className="capitalText">{this.props.capitalText}</h1>
-                    </div>
-
-                    <div  className = 'border'>
+                    <div style={{display: this.props.display}} className = 'row'>
                     
-                        <h1 style={{position: this.state.position}} className="pointsTitle">Total Points:</h1>
-                        <h1 style={{position: this.state.position}} className="pointText">{this.props.points}</h1>
+                        <input style={{position: this.props.position}} type="text" value={this.props.val} onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} maxLength={25} autoComplete="off" className="input" id="input"></input>
 
-                        <input style={{position: this.state.position}} type="text" value={this.props.val} onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} maxLength={25} autoComplete="off" className="input" id="input"></input>
+                        <button style={{position: this.props.position}} type="submit" className="skip" onClick={this.props.onSkip}>Skip</button>
 
-                        <button style={{position: this.state.position}} type="submit" className="skip" onClick={this.props.onSkip}>Skip</button>
-
-                        <button style={{position: this.state.position}} type="submit" className="hint" onClick={this.props.onHint}>Hint</button>
-                                            
+                        <button style={{position: this.props.position}} type="submit" className="hint" onClick={this.props.onHint}>Hint</button>
                     </div>
                 
                 </form>

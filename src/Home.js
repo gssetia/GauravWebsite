@@ -31,15 +31,15 @@ export default class Home extends React.Component {
 				
 					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 					<div id = '1' className = 'topOfPage row justify-content-center home'> 
-						<div className = 'col-md-3 col-sm-12 centerContact'>
-							<img className = 'gs' src = {gs} ></img>
+						<div className = 'col-md-4 col-sm-12 centerContact'>
+							<img className = 'gs frontLogo' src = {gs} ></img>
 						</div>
 						<div className = 'col-md-7 col-sm-12'>
 							<FadeIn>
 								<h2 className = 'intro'> 
-									<span className = 'welcome'>Welcome to my Website!</span><br></br><br></br>
-									<span className = 'name'>My name is Gaurav Setia</span><br></br>
-									<span className = 'homeContent'> Software Engineer at the</span>
+									<span className = 'welcome front'>Welcome to my Website!</span><br></br><br></br>
+									<span className = 'name front'>My name is Gaurav Setia</span><br></br>
+									<span className = 'homeContent front'> Software Engineer at the</span>
 									<img className = 'uoftlogo' src = {logo} ></img>
 									
 								</h2>

@@ -316,13 +316,6 @@ HandleNext method used to save space, process the screen to the next country
         this.setState({flag:null});                 //reset flag hint to blank
         this.setState({add:4});                     //reset potential points earned to default (4)
         this.setState({capitalText:null});          //reset capital hint to blank
-        //reset the three hint indicators back to unused state
-        document.getElementById("dot1").style.backgroundColor = '#66ff33' 
-        document.getElementById("dot1").style.borderColor = 'green'
-        document.getElementById("dot2").style.backgroundColor = '#66ff33'
-        document.getElementById("dot2").style.borderColor = 'green'
-        document.getElementById("dot3").style.backgroundColor = '#66ff33'
-        document.getElementById("dot3").style.borderColor = 'green'
   }
 
 /*
@@ -331,7 +324,6 @@ onHint method used to process 3 separate hints in order
   Second hint: Flag of the country is shown (flag)
   Third hint: Capital city of the country is shown (capitalText)
   All hints lower the achievable point given by 1, from 4 to 1 (add)
-  There are green indicators that turn red when a hint is used (dot#)
   The total hints the user uses throughout the entire game is displayed on the left side (hintTotal)
 */
   onHint(){
@@ -341,16 +333,12 @@ onHint method used to process 3 separate hints in order
       this.setState({add:3});
       //this.setState({hintText:this.state.images[this.state.rank].hint});
       this.setState({hintText:this.state.countries[this.state.rank].hint});
-      document.getElementById("dot1").style.backgroundColor = 'red';
-      document.getElementById("dot1").style.borderColor = '#ff6633';
       this.setState({hintTotal:this.state.hintTotal + 1});
       {this.state.hintTotal===0 ? this.setState({hintS:""}):this.setState({hintS:"s"})};
 
     }else if (this.state.add === 3) {
       {this.state.mute === false ? this.handleAudio(hintAudio) : null};
       this.setState({flag:this.state.images[this.state.rank].flag});
-      document.getElementById("dot2").style.backgroundColor = 'red';
-      document.getElementById("dot2").style.borderColor = '#ff6633';
       this.setState({add:2});
       this.setState({hintTotal:this.state.hintTotal + 1});
       {this.state.hintTotal===0 ? this.setState({hintS:""}):this.setState({hintS:"s"})};
@@ -360,9 +348,6 @@ onHint method used to process 3 separate hints in order
       {this.state.mute === false ? this.handleAudio(hintAudio) : null};
       //this.setState({capitalText:this.state.images[this.state.rank].capital});
       this.setState({capitalText:this.state.countries[this.state.rank].capital});
-      
-      document.getElementById("dot3").style.backgroundColor = 'red';
-      document.getElementById("dot3").style.borderColor = '#ff6633';
       this.setState({add:1});
       this.setState({hintTotal:this.state.hintTotal + 1});
       {this.state.hintTotal===0 ? this.setState({hintS:""}):this.setState({hintS:"s"})};
@@ -413,12 +398,6 @@ onClick method is used when the user starts the game and when the user resets.
         this.setState({hintTotal:0});
         this.setState({skipTotal:0});
         this.setState({wrongTotal:0});
-        document.getElementById("dot1").style.backgroundColor = '#66ff33'
-        document.getElementById("dot1").style.borderColor = 'green'
-        document.getElementById("dot2").style.backgroundColor = '#66ff33'
-        document.getElementById("dot2").style.borderColor = 'green'
-        document.getElementById("dot3").style.backgroundColor = '#66ff33'
-        document.getElementById("dot3").style.borderColor = 'green'
       }
     }
 
@@ -486,7 +465,7 @@ handleAudio(audioFile){
     
     return(
 
-      <div className='container'>
+      <div className='container-fluid'>
       
         
         <Layout 

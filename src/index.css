@@ -64,6 +64,8 @@ body {
 
 }
 
+
+
 .gs{
   height:20vw;
   width:20vw;
@@ -92,6 +94,7 @@ body {
 
 .startreset{
   color:blue;
+  font-size: 10%;
 }
 
 .startreset:hover{
@@ -101,7 +104,7 @@ body {
 
 .styles1  {
   background: rgb(0, 153, 255);
-  font-size: 24px;
+  font-size: 2em;
   font-weight: bold;
   line-height: 50px;
   border-width:20px;
@@ -116,16 +119,16 @@ body {
 
 /*Header*/
 .input{
-  width:29%;
+  width:34%;
   /* position:fixed;   */
   text-align: center;
   bottom:2%;
   right:34.1%;
-  font-size:25px;
-  padding-top:10px;
+  font-size:3.5vw;
+  padding-top:5px;
   padding-right:15px;
   padding-left:15px;
-  padding-bottom:10px;
+  padding-bottom:5px;
   background-color:#3CBC8D;
   color:white;
   border-color: green;
@@ -133,7 +136,9 @@ body {
   left: 50%;
   transform:translateX(-50%);
 }
-
+.centerHeader{
+  vertical-align: middle;
+}
 input[type=text]:focus{
   background-color:green;
 }
@@ -143,51 +148,32 @@ input[type=text]:focus{
   border-radius:10px;
   /* position:fixed; */
   padding:8px;
-  border-color:black;
-  background-color:black;
+  background-color:white;
   color:white;
-  font-size:15px;
+  font-size: 3vh;
+  color:black;
   right:82%;
   top:3%;
 }
 
 .mute:hover{
   background-color:red;
+  border-color:red;
   cursor: pointer;
 }
 .mute:active {
   transform: translateY(3px);
 }
-
-.skipTotal {
-  /* position:absolute;
-  left:12%;
-  top:36%; */
-  font-size: 22px;
-  color:white;
+.myrow{
+  height: 50vh;
+  width: 100vw; 
+  /* transform: translateX(-300px);  */
 }
-.hintTotal {
-  /* position:absolute;
-  left:12%;
-  top:43%; */
-  font-size: 22px;
-  color:white;
-}
-
-.wrongTotal {
-  /* position:absolute; */
-  /* left:12%; */
-  /* top:50%; */
-  font-size: 22px;
-  color:white;
-}
-
 .img {
   /* position:absolute; */
-  height:auto;
-  width:auto;
-  max-height: 280px;
-  max-width: 350px;
+  margin-top:5vh;
+  max-height: 35vh;
+  max-width: 55vh;
 
   /* right: 50%;
   left: 50%;
@@ -205,8 +191,13 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
-  /* right:12%;
-  top:24.5%; */
+
+  margin-left: 69%;
+  padding:8px;
+  bottom:35px;
+  right:20%;
+  /* right:12%; */
+  /* top:24.5%; */
 }
 
 .dot2 {
@@ -219,6 +210,10 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
+  margin-left: 69%;
+  padding:8px;
+  bottom:35px;
+  right:17%;
   /* right:9%;
   top:24.5%; */
 }
@@ -233,8 +228,17 @@ input[type=text]:focus{
   border-color: green;
   border-width: 3px;
   border-style: solid;
+  margin-left: 69%;
+  padding:8px;
+  bottom:35px;
+  right:14%;
   /* right:6%;
   top:24.5%; */
+}
+
+.layers{
+  margin-bottom:5px;
+  font-size: 2.7vh;
 }
 
 .flag{
@@ -242,48 +246,75 @@ input[type=text]:focus{
   height:auto;
   /* right:7%;
   bottom:27%; */
-  max-width: 240px;
   width:auto;
-  max-height: 170px;
+  max-height: 10vh;
+}
+.hints{
+  margin-top:5vh;
+}
+.phone{
+  margin-top:5vh;
+}
+@media (max-width: 600px) {
+  .imgs{
+    max-height: 32vh;
+    max-width: 45vh;
+    margin-top:0;
+  }
+  .phone{
+    margin-top:0;
+  }
+  .front{
+    font-size:5vw;
+  }
+  .frontLogo{
+    height:25vw;
+    width:25vw;
+  }
 }
 
-.pointsTitle{
+.points{
 /* position:fixed; */
-left:13%;
-bottom:1%;
+left:10%;
+bottom:1.5%;
 color:white;
+}
+.sideBar{
+  font-size: 2.1ex;
+  color:white;
 }
 
 .pointText{
   background-color: gold;
-  font-size:35px;
   color:black;
   padding-left: 5px;
   padding-right: 5px;
+  margin-left:5px;
   /* position:fixed; */
-  bottom:1%;
-  left:30%;
 }
 
 .hintText{
   /* position: absolute; */
   background-color: none;
-  max-width: 18%;
-  padding: 10px;
+  /* padding: 10px; */
   /* right:7%; */
   font: 20px "Times New Roman", Futura, Serif;
-  bottom: 54%;
+  font-size: 2.1ex;
+  font-size: 3vh;
+  /* bottom: 54%; */
   color:white;
 }
 
 .capitalText {
   /* position: absolute; */
   background-color: none;
-  max-width: 18%;
-  padding: 10px;
+  /* max-width: 18%;
+  padding: 10px; */
   /* right:7%;
   bottom:15%; */
   font: 20px "Times New Roman", Futura, Serif;
+  font-size: 2.1ex;
+  font-size: 3vh;
   color:white;
 }
 
@@ -300,12 +331,13 @@ color:white;
   outline:none;
   border-radius:10px;
   /* position:fixed; */
-  padding:8px;
+  padding:5px;
   border-color:black;
   background-color:yellow;
-  font-size:25px;
-  bottom:2.5%;
-  right:14%;
+  font-size:2.3vw;
+  width:10%;
+  bottom:2%;
+  left:18%;
 }
 
 .hint:hover{
@@ -321,18 +353,21 @@ color:white;
   top:20%;
   position: absolute; */
   color:white;
+  padding:0px;
+  margin:0px;
 }
 .hint {
   outline: none;
   border-radius:10px;
   /* position: fixed; */
   margin-left: 69%;
-  padding:8px;
+  padding:5px;
   border-color:black;
   background-color:orange;
-  font-size:25px;
-  bottom:2.5%;
-  right:24%;
+  font-size:2.3vw;
+  width:10%;
+  bottom:2%;
+  right:18%;
 }
 
 .buttonGuess {
