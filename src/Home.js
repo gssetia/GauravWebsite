@@ -34,13 +34,13 @@ export default class Home extends React.Component {
 						<div className = 'col-md-4 col-sm-12 centerContact'>
 							<img className = 'gs frontLogo' src = {gs} ></img>
 						</div>
-						<div className = 'col-md-7 col-sm-12'>
+						<div className = 'col-md-8 col-sm-12'>
 							<FadeIn>
 								<h2 className = 'intro'> 
 									<span className = 'welcome front'>Welcome to my Website!</span><br></br><br></br>
 									<span className = 'name front'>My name is Gaurav Setia</span><br></br>
-									<span className = 'homeContent front'> Software Engineer at the</span>
-									<img className = 'uoftlogo' src = {logo} ></img>
+									<span className = 'subText subFront'> Software Engineer at the</span>
+									<img className = 'uoftlogo imgFront' src = {logo} ></img>
 									
 								</h2>
 							</FadeIn>

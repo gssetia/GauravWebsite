@@ -20,23 +20,23 @@ export default class Header extends React.Component {
       
         return(                 
             
-                <form className = 'row myrow border largeSpace justify-content-center' onSubmit={this.props.handleSubmit}>
+                <form className = 'row myrow largeSpace justify-content-center' onSubmit={this.props.handleSubmit}>
                     
-                    <div className ='phone col-lg-2 align-items-stretch col-md-6 col-sm-6 col-5 order-lg-1'>
+                    <div className ='phone counts col-lg-2 col-md-6 col-sm-6 col-5 order-lg-1'>
 						
 						<button type="submit" className="buttonGuess" onClick={this.props.onGuess}>Guess</button>
-						<button className="mute layers" onClick={this.props.onMute}> {this.props.muteText}</button>
+						<button className="mute layers gamePhone" onClick={this.props.onMute}> {this.props.muteText}</button>
 						<span className='sideBar'>
-							<div className="layers"> Skips: {this.props.skipTotal}</div>
-							<div className="layers"> Hints: {this.props.hintTotal}</div>
-							<div className="layers"> Incorrect: {this.props.wrongTotal}</div>
-							<div className="layers points">Points:<span className="pointText">{this.props.points}</span></div>
+							<div className="layers gamePhone"> Skips: {this.props.skipTotal}</div>
+							<div className="layers gamePhone"> Hints: {this.props.hintTotal}</div>
+							<div className="layers gamePhone"> Incorrect: {this.props.wrongTotal}</div>
+							<div className="layers points gamePhone">Points:<span className="pointText">{this.props.points}</span></div>
 						</span>
                     </div>
 
 					<div className='hints phone col-lg-2 col-md-6 col-sm-6 col-5 order-lg-3'>				
 					
-						<h1 className="hintText">{this.props.hintText}</h1>
+						<div className="hintText">{this.props.hintText}</div>
 					
 						<img className="flag" src={this.props.flag} width="20" height="25"/>
 

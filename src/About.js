@@ -35,8 +35,9 @@ export default class About extends React.Component {
 					</div>
 
 					<div className = 'row justify-content-center'>
-						<div className='post-content col-3 space'>
+						<div className='col-4 aboutLists listFront space'>
 							<FadeIn>
+								<h4>Languages</h4>
 								<ul>
 									<li>
 										Python
@@ -62,8 +63,9 @@ export default class About extends React.Component {
 								</ul>
 							</FadeIn>
 						</div>
-						<div className='post-content col-3 space'>
+						<div className='col-4 aboutLists listFront space'>
 							<FadeIn>
+								<h4>Technologies</h4>
 								<ul>
 									<li>
 										React

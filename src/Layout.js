@@ -28,7 +28,7 @@ export default class Layout extends React.Component {
 		return(
 			<div className='row justify-content-center'>
 				
-				<div className = 'col-md-6 col-sm-10'>
+				<div className = 'col-md-6 col-9'>
 					<div className="styles1"> Brain Mapper! <br/>
 						<a className = "startreset" onClick= {this.props.onClick} > {this.props.reset} </a> 
 						
