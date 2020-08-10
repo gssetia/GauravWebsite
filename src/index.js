@@ -11,29 +11,21 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
 
-  constructor(props){
-  super(props);
-  this.state= {
-      };
-    }
-
-
-  render(){
-    return(
+  render() {
+    return (
 
       <div>
         <BrowserRouter>
-          <Navigation/>
+          <Navigation />
           <Switch>
-            <Route path = "/" component = {Home} exact/>
-            <Route path = "/brainmapper" component = {BrainMapper}/>
-            <Route component = {Error}/>
+            <Route path="/" component={Home} exact />
+            <Route path="/brainmapper" component={BrainMapper} />
+            <Route component={Error} />
           </Switch>
-        </BrowserRouter> 
-        
+        </BrowserRouter>
+
       </div>
-      
-      );
+    );
   }
 }
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

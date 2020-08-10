@@ -106,7 +106,7 @@ body {
 
 .styles1  {
   background: rgb(0, 153, 255);
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: bold;
   line-height: 50px;
   border-width:20px;
@@ -118,7 +118,9 @@ body {
   outline-offset: 5px;
   outline-color:rgb(0, 153, 255);
 }
-
+.pls{
+  font-size: 1em;
+}
 /*Header*/
 .input{
   width:34%;
@@ -138,9 +140,7 @@ body {
   left: 50%;
   transform:translateX(-50%);
 }
-.centerHeader{
-  vertical-align: middle;
-}
+
 input[type=text]:focus{
   background-color:green;
 }
@@ -511,9 +511,7 @@ color:white;
   }
 }
 
-
 /*Error*/
-
 .errorMessage{
   position:absolute;
   left:42%;
