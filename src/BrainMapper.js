@@ -421,7 +421,7 @@ export default class Game extends React.Component {
         this.setState({ points: this.state.points + this.state.add });
 
         if (this.state.rank === 78) {
-          this.handleAudio(winnerAudio);
+          { this.state.mute === false ? this.handleAudio(winnerAudio) : null };
         } else {
           { this.state.mute === false ? this.handleAudio(correctAudio) : null };
         }
