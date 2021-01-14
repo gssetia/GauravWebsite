@@ -35,8 +35,8 @@ export default class About extends React.Component {
 					<span className='col-md-9 col-sm-12 space largeSpace aboutTitle'> My Skillset</span>
 				</div>
 
-				<div className='row justify-content-center'>
-					<div className='col-4 aboutLists listFront space'>
+				<div className='row justify-content-center aboutLists'>
+					<div className='col-3 listFront space'>
 						<FadeIn>
 							<h4>Languages</h4>
 							<ul>
@@ -47,7 +47,7 @@ export default class About extends React.Component {
 									Java
 								</li>
 								<li>
-									C
+									C/C++
 								</li>
 								<li>
 									JavaScript
@@ -56,7 +56,13 @@ export default class About extends React.Component {
 									HTML/CSS
 								</li>
 								<li>
-									JavaScript
+									Dart
+								</li>
+								<li>
+									Racket
+								</li>
+								<li>
+									Haskell
 								</li>
 								<li>
 									And more..
@@ -65,7 +71,7 @@ export default class About extends React.Component {
 						</FadeIn>
 					</div>
 
-					<div className='col-4 aboutLists listFront space'>
+					<div className='col-3 listFront space'>
 						<FadeIn>
 							<h4>Technologies</h4>
 							<ul>
@@ -77,6 +83,12 @@ export default class About extends React.Component {
 								</li>
 								<li>
 									Node.Js
+								</li>
+								<li>
+									Firebase
+								</li>
+								<li>
+									Flutter
 								</li>
 								<li>
 									Heroku

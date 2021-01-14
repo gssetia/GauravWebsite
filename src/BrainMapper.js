@@ -362,7 +362,7 @@ export default class Game extends React.Component {
   onSkip() {
     if (this.state.rank !== 79) {
       if (this.state.rank === 78) {
-        this.handleAudio(winnerAudio);
+        { this.state.mute === false ? this.handleAudio(winnerAudio) : null };
       } else {
         { this.state.mute === false ? this.handleAudio(skipAudio) : null };
       }
@@ -421,7 +421,9 @@ export default class Game extends React.Component {
         this.setState({ points: this.state.points + this.state.add });
 
         if (this.state.rank === 78) {
-          { this.state.mute === false ? this.handleAudio(winnerAudio) : null };
+          
+          { this.state.mute === true ? this.handleAudio(winnerAudio) : null };
+          
         } else {
           { this.state.mute === false ? this.handleAudio(correctAudio) : null };
         }
@@ -449,6 +451,7 @@ export default class Game extends React.Component {
   }
 
   handleSubmit(event) {
+    this.onGuess();
     this.setState({ val: "" });
     event.preventDefault();
   }

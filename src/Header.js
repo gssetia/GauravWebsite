@@ -21,9 +21,8 @@ export default class Header extends React.Component {
 			<form className='row myrow largeSpace justify-content-center' onSubmit={this.props.handleSubmit}>
 
 				<div className='phone counts col-lg-2 col-md-6 col-sm-6 col-5 order-lg-1'>
-
-					<button type="submit" className="buttonGuess" onClick={this.props.onGuess}>Guess</button>
-					<button className="mute layers gamePhone" onClick={this.props.onMute}> {this.props.muteText}</button>
+					
+					<button type="button" className="mute layers gamePhone" onClick={this.props.onMute}> {this.props.muteText}</button>
 
 					<span className='sideBar'>
 						<div className="layers gamePhone"> Skips: {this.props.skipTotal}</div>
@@ -51,9 +50,9 @@ export default class Header extends React.Component {
 
 					<input style={{ position: this.props.position }} type="text" value={this.props.val} onSubmit={this.props.handleSubmit} onChange={this.props.handleChange} maxLength={25} autoComplete="off" className="input" id="input"></input>
 
-					<button style={{ position: this.props.position }} type="submit" className="skip" onClick={this.props.onSkip}>Skip</button>
+					<button style={{ position: this.props.position }} type="button" className="skip" onClick={this.props.onSkip}>Skip</button>
 
-					<button style={{ position: this.props.position }} type="submit" className="hint" onClick={this.props.onHint}>Hint</button>
+					<button style={{ position: this.props.position }} type="button" className="hint" onClick={this.props.onHint}>Hint</button>
 
 				</div>
 
