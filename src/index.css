@@ -50,8 +50,9 @@ body {
   font-weight: bold;
   font-size:3vw;
 }
-.uoftlogo{
-  height:18vw;
+.logo{
+  height:3vw;
+
 }
 .home{
   padding-top:8vw;
@@ -64,6 +65,12 @@ body {
 }
 .subText{
   font-size:1.7vw;
+}
+.paddin{
+  padding-top:20px;
+}
+.logoSpace{
+  margin: 0px;
 }
 
 

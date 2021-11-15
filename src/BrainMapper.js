@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from './Layout';
 import Header from './Header';
 import './index.css';
-import axios from "axios";
+import axios from 'axios';
 
 // Importing all of the country outlines 
 // and the country's respective flags (starts with F) from the src folder
@@ -174,7 +174,6 @@ import skipAudio from './Components/skip.wav'
 import hintAudio from './Components/hint.wav'
 import winnerAudio from './Components/finish.wav'
 
-
 export default class Game extends React.Component {
 
   constructor(props) {
@@ -300,8 +299,10 @@ export default class Game extends React.Component {
 
   }
 
+  // Load the game date from the heroku api when the page loads 
   componentDidMount = () => {
-    axios.get("/api/brainmapperdata").then(response => {
+    axios.get("https://mysql-website.herokuapp.com/api/brainmapperdata")
+    .then(response => {
       this.setState({ countries: response.data });
       console.log(response.data[0].alt[2], 'test');
     });
@@ -416,6 +417,9 @@ export default class Game extends React.Component {
 
       //if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
       var guess = document.getElementById("input").value.trim().toLowerCase();
+      
+      console.log(this.state.rank);
+      console.log(this.state.countries);
       if ((guess !== "") && (guess === this.state.countries[this.state.rank].name || guess === this.state.countries[this.state.rank].alt)) {
 
         this.setState({ points: this.state.points + this.state.add });

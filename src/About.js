@@ -21,11 +21,12 @@ export default class About extends React.Component {
 						<FadeIn>
 							<p>
 								<span className='emphasis space'>Hello! My name is Gaurav Setia and I'm an aspiring software engineer.</span> <br/>
-								I'm currently in third year, studying at the University of Toronto.
-								I'm on track to graduate in 2022 with an Honours Bachelor of Science with a specialization in Computer Science.
-								My current experience studying at the University of Toronto has brought out the best of my work ethic.
-								I learned which skills to develop and how to grow the most effective way as a future software engineer.
-								My favourite part of this journey are the new and exciting technologies that are introduced daily. For a software engineer, there is always more to learn.
+								I have completed my third year studying at the University of Toronto and I am currently working as a Software Engineer at AMD for my 1 year of Co-op!
+								I'm on track to graduate in 2023 with an Honours Bachelor of Science with a specialization in Computer Science.
+								My current experience working at AMD has brought out the best of my work ethic.
+								I have developed my skills in professional communication and expert problem solving from working at AMD.
+								My favourite part of this journey are the new and exciting technologies that are introduced daily. 
+								For a software engineer, there is always more to learn.
 							</p>
 						</FadeIn>
 					</div>
