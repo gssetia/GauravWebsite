@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './Components/brainmapperlogo.png';
 import rover from './Components/rover.jpg';
 import flappybird from './Components/flappy.PNG';
-import Game from './BrainMapper.js'
+import Game from './BrainMapper.js';
+import Sportify from './Components/sportify.png';
 
 export default class Apps extends React.Component {
     constructor() {
@@ -55,6 +56,24 @@ export default class Apps extends React.Component {
                             <div className='projectTitle largeSpace'> Brain Mapper </div><br></br>
                             <div> My first personal Javascript project. Its a trivia game where you guess the country based on its outline. </div><br></br>
                             <div> The game data is stored on a MySQL database server that is deployed by Heroku. </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="row justify-content-center largeSpace largerSpace">
+                    
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <a target="_blank" href='https://github.com/UTSCCSCC01/Sportify' rel="noopener noreferrer">
+                            <img alt='Sportify' className='sportify' src={Sportify}></img>
+                        </a>
+                    </div>
+
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <ul className='projectDesc'>
+                            <div className='projectTitle largeSpace'> Sportify </div><br></br>
+                            <div> Created an application using Flutter SDK and Firebase's real-time database to create an Android and IOS mobile app. </div><br></br>
+                            <div> Allows students to create and join sporting events for Google's Developer Student club at UofT. </div>
+                            
                         </ul>
                     </div>
                 </div>

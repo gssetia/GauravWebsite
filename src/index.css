@@ -509,6 +509,11 @@ color:white;
   font-size: 60px;
 }
 
+.sportify {
+    width:250px;
+    
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
