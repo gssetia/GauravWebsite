@@ -5,9 +5,8 @@ import './index.css';
 import About from './About';
 import Apps from './Apps';
 import Contact from './Contact';
-import logo from './Components/University-of-Toronto-01.svg';
 import gs from './Components/gss.jpeg';
-import amdlogo from './Components/amdlogo.png';
+import uoftlogo from './Components/uoft.svg';
 
 const FadeIn = styled.div`animation: 4s ${keyframes`${fadeIn}`}`;
 
@@ -31,9 +30,8 @@ export default class Home extends React.Component {
 									<span className='welcome front'>Welcome to my Website!</span><br></br><br></br>
 									<span className='name front'>My name is Gaurav Setia</span><br></br>
 									<div className ='paddin'>
-									<span className='subText subFront'> Software Engineer at</span>
-									<span className='logoSpace'> </span>
-									<img alt='AMD logo' className='logo imgFront' src={amdlogo} ></img>
+									<span className='subText subFront'> Software Engineering new grad from the </span>
+									<img alt='Uoft logo' className='logo imgFront' src={uoftlogo} ></img>
 									</div>
 								</h2>
 							</FadeIn>

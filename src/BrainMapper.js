@@ -301,10 +301,13 @@ export default class Game extends React.Component {
 
   // Load the game date from the heroku api when the page loads 
   componentDidMount = () => {
-    axios.get("https://mysql-website.herokuapp.com/api/brainmapperdata")
+    axios.get("https://expressjs-postgres-production-f26a.up.railway.app")
     .then(response => {
       this.setState({ countries: response.data });
-      console.log(response.data[0].alt[2], 'test');
+      this.state.countries.sort(function(a,b) {
+          return (a.id < b.id) ? -1 : 1;
+        });
+      // console.log(response.data[0].name, 'test');
     });
   };
 
@@ -401,6 +404,7 @@ export default class Game extends React.Component {
     }
   }
 
+
   /*
     onGuess method is used when the user enters an answer
     If the input is correct, then the handleNext method is used to process to the next country,
@@ -412,19 +416,16 @@ export default class Game extends React.Component {
     through each country seamlessly 
   */
   onGuess() {
-    if (this.state.rank !== 79) {
-      //this.setState({rank:this.state.rank+1});
-
+    const num = this.state.countries.length;
+    if (this.state.rank !== num - 1) {
       //if(document.getElementById("input").value.trim().toLowerCase() === this.state.images[this.state.rank].id){
       var guess = document.getElementById("input").value.trim().toLowerCase();
-      
-      console.log(this.state.rank);
-      console.log(this.state.countries);
+
       if ((guess !== "") && (guess === this.state.countries[this.state.rank].name || guess === this.state.countries[this.state.rank].alt)) {
 
         this.setState({ points: this.state.points + this.state.add });
 
-        if (this.state.rank === 78) {
+        if (this.state.rank === num - 2) {
           
           { this.state.mute === true ? this.handleAudio(winnerAudio) : null };
           

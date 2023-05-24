@@ -21,7 +21,8 @@
     "react-scroll": "^1.8.0",
     "react-scrollspy-nav": "^1.2.4",
     "serve": "^11.3.2",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "react-scripts start",

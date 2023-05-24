@@ -51,7 +51,7 @@ body {
   font-size:3vw;
 }
 .logo{
-  height:3vw;
+  height:15vw;
 
 }
 .home{
@@ -69,10 +69,6 @@ body {
 .paddin{
   padding-top:20px;
 }
-.logoSpace{
-  margin: 0px;
-}
-
 
 .gs{
   height:20vw;

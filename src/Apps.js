@@ -4,6 +4,8 @@ import rover from './Components/rover.jpg';
 import flappybird from './Components/flappy.PNG';
 import Game from './BrainMapper.js';
 import Sportify from './Components/sportify.png';
+import Rplace from './Components/rplace.png';
+import URLshortener from './Components/urlshortener.jpeg';
 
 export default class Apps extends React.Component {
     constructor() {
@@ -55,7 +57,42 @@ export default class Apps extends React.Component {
                         <ul className='projectDesc'>
                             <div className='projectTitle largeSpace'> Brain Mapper </div><br></br>
                             <div> My first personal Javascript project. Its a trivia game where you guess the country based on its outline. </div><br></br>
-                            <div> The game data is stored on a MySQL database server that is deployed by Heroku. </div>
+                            <div> The game data is stored on a PostgreSQL instance that is deployed by Railway.</div> <b> Click on the map to play! </b> 
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="row justify-content-center largeSpace largerSpace">
+                    
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <a target="_blank" href='https://github.com/gssetia/r-place' rel="noopener noreferrer">
+                            <img alt='rplace' className='brainmapperlogo' src={Rplace}></img>
+                        </a>
+                    </div>
+
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <ul className='projectDesc'>
+                            <div className='projectTitle largeSpace'> r/place Clone </div><br></br>
+                            <div> We recreated Reddit's famous April Fools event called r/place where individuals around the world can contribute one pixel every 5 minutes onto a shared canvas.</div><br></br>
+                            <div> Used 10 Amazon Web Services in conjunction to create an highly scalable and serverless application. Like the original implementation, your IP address is limited to one pixel per 5 minutes.  </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="row justify-content-center largeSpace largerSpace">
+                    
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <a target="_blank" href='https://github.com/gssetia/URLShortener' rel="noopener noreferrer">
+                            <img alt='URLshortener' className='sportify' src={URLshortener}></img>
+                        </a>
+                    </div>
+
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <ul className='projectDesc'>
+                            <div className='projectTitle largeSpace'> URL Shortener </div><br></br>
+                            <div> Created an highly scalable URL shortening service which is able to store millions of key-pairs.  </div><br></br>
+                            <div> The number of multi-threaded nodes running the Python/Flask application is scaled to guarantee availability and integrity. Takes advantage of the Cassandra architecture for persistence and a docker swarm of Redis nodes for caching. </div>
+                            
                         </ul>
                     </div>
                 </div>
@@ -71,7 +108,7 @@ export default class Apps extends React.Component {
                     <div className='col-md-5 col-sm-12 centerContact'>
                         <ul className='projectDesc'>
                             <div className='projectTitle largeSpace'> Sportify </div><br></br>
-                            <div> Created an application using Flutter SDK and Firebase's real-time database to create an Android and IOS mobile app. </div><br></br>
+                            <div> Created an application using the Flutter SDK and Firebase's real-time database to create an Android and IOS compatible mobile app. </div><br></br>
                             <div> Allows students to create and join sporting events for Google's Developer Student club at UofT. </div>
                             
                         </ul>

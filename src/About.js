@@ -20,13 +20,16 @@ export default class About extends React.Component {
 					<div className="col-md-8 col-sm-11 space">
 						<FadeIn>
 							<p>
-								<span className='emphasis space'>Hello! My name is Gaurav Setia and I'm an aspiring software engineer.</span> <br/>
-								I have completed my third year studying at the University of Toronto and I am currently working as a Software Engineer at AMD for my 1 year of Co-op!
-								I'm on track to graduate in 2023 with an Honours Bachelor of Science with a specialization in Computer Science.
-								My current experience working at AMD has brought out the best of my work ethic.
+								<span className='emphasis space'>Hello! My name is Gaurav and I'm an aspiring software engineer.</span> <br/>
+								I have just completed my final year studying at the University of Toronto. 
+								I will graduate with an Honours Bachelor of Science with a specialization in Computer Science.
+								For my professional experience year of co-op, I worked as a Software Engineer at AMD.
+								My experience working at AMD has brought out the best of my work ethic.
 								I have developed my skills in professional communication and expert problem solving from working at AMD.
 								My favourite part of this journey are the new and exciting technologies that are introduced daily. 
 								For a software engineer, there is always more to learn.
+								After finishing my time at AMD, I was awarded a Certificate of Recognition from the AMD University Relations Team.
+								If you would like to read a recommendation from my manager, please visit my <a href="#4"> Linkedin page. </a> 
 							</p>
 						</FadeIn>
 					</div>
@@ -45,16 +48,19 @@ export default class About extends React.Component {
 									Python
 								</li>
 								<li>
-									Java
+									JavaScript
+								</li>
+								<li>
+									HTML/CSS
 								</li>
 								<li>
 									C/C++
 								</li>
 								<li>
-									JavaScript
+									Bash/Shell
 								</li>
 								<li>
-									HTML/CSS
+									Java
 								</li>
 								<li>
 									Dart
@@ -64,9 +70,6 @@ export default class About extends React.Component {
 								</li>
 								<li>
 									Haskell
-								</li>
-								<li>
-									And more..
 								</li>
 							</ul>
 						</FadeIn>
@@ -80,10 +83,16 @@ export default class About extends React.Component {
 									React
 								</li>
 								<li>
-									Git
+									Node.Js
 								</li>
 								<li>
-									Node.Js
+									Django
+								</li>
+								<li>
+									Flask
+								</li>
+								<li>
+									Git
 								</li>
 								<li>
 									Firebase
@@ -95,13 +104,19 @@ export default class About extends React.Component {
 									Heroku
 								</li>
 								<li>
+									Railway
+								</li>
+								<li>
 									Docker
 								</li>
 								<li>
-									MySQL
+									PostgreSQL
 								</li>
 								<li>
-									And more..
+									AWS
+								</li>
+								<li>
+									Redis
 								</li>
 							</ul>
 						</FadeIn>
