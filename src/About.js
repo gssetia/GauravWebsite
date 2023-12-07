@@ -26,10 +26,10 @@ export default class About extends React.Component {
 								For my professional experience year of co-op, I worked as a Software Engineer at AMD.
 								My experience working at AMD has brought out the best of my work ethic.
 								I have developed my skills in professional communication and expert problem solving from working at AMD.
-								My favourite part of this journey are the new and exciting technologies that are introduced daily. 
-								For a software engineer, there is always more to learn.
 								After finishing my time at AMD, I was awarded a Certificate of Recognition from the AMD University Relations Team.
-								If you would like to read a recommendation from my manager, please visit my <a href="#4"> Linkedin page. </a> 
+								If you would like to read a recommendation from my manager, please visit my <a href="#4"> Linkedin page</a>. 
+								For a software engineer, there is always more to learn. For example, I created a React Native Android app called <a href="#3">SpeechSweep</a> which is in the process of being published to Google's Play Store.
+								
 							</p>
 						</FadeIn>
 					</div>
@@ -60,16 +60,10 @@ export default class About extends React.Component {
 									Bash/Shell
 								</li>
 								<li>
-									Java
-								</li>
-								<li>
 									Dart
 								</li>
 								<li>
-									Racket
-								</li>
-								<li>
-									Haskell
+									Java
 								</li>
 							</ul>
 						</FadeIn>
@@ -84,6 +78,9 @@ export default class About extends React.Component {
 								</li>
 								<li>
 									Node.Js
+								</li>
+								<li>
+									React Native
 								</li>
 								<li>
 									Django
@@ -101,10 +98,10 @@ export default class About extends React.Component {
 									Flutter
 								</li>
 								<li>
-									Heroku
+									AWS
 								</li>
 								<li>
-									Railway
+									Redis
 								</li>
 								<li>
 									Docker
@@ -113,10 +110,10 @@ export default class About extends React.Component {
 									PostgreSQL
 								</li>
 								<li>
-									AWS
+									NoSQL
 								</li>
 								<li>
-									Redis
+									MySQL
 								</li>
 							</ul>
 						</FadeIn>

@@ -6,6 +6,7 @@ import Game from './BrainMapper.js';
 import Sportify from './Components/sportify.png';
 import Rplace from './Components/rplace.png';
 import URLshortener from './Components/urlshortener.jpeg';
+import Speechsweep from './Components/speechsweep.png';
 
 export default class Apps extends React.Component {
     constructor() {
@@ -62,6 +63,23 @@ export default class Apps extends React.Component {
                     </div>
                 </div>
 
+                <div id = 'sweep' className="row justify-content-center largeSpace largerSpace">
+                    
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <a target="_blank" href='https://github.com/gssetia/speechsweep' rel="noopener noreferrer">
+                            <img alt='speechsweep' className='speechsweep' src={Speechsweep}></img>
+                        </a>
+                    </div>
+
+                    <div className='col-md-5 col-sm-12 centerContact'>
+                        <ul className='projectDesc'>
+                            <div className='projectTitle largeSpace'> SpeechSweep </div><br></br>
+                            <div> The weekly lottery where one winner's submitted message is sent to all other participants as a notification. Currently in the process of being published to Google's Play Store. </div><br></br>
+                            <div> Created using React Native with Firebase's backend cloud services. Realtime Database for storage, Play Integrity for OTP authentication and Cloud Functions for serving notifcations to participants. </div>
+                        </ul>
+                    </div>
+                </div>
+
                 <div className="row justify-content-center largeSpace largerSpace">
                     
                     <div className='col-md-5 col-sm-12 centerContact'>
@@ -108,8 +126,8 @@ export default class Apps extends React.Component {
                     <div className='col-md-5 col-sm-12 centerContact'>
                         <ul className='projectDesc'>
                             <div className='projectTitle largeSpace'> Sportify </div><br></br>
-                            <div> Created an application using the Flutter SDK and Firebase's real-time database to create an Android and IOS compatible mobile app. </div><br></br>
-                            <div> Allows students to create and join sporting events for Google's Developer Student club at UofT. </div>
+                            <div> Created an IOS & Android app for organizing spontaneous or planned student sporting events at UofT. </div><br></br>
+                            <div> I worked with a team of 5 as part of Google's Developer Student Club. Users are authenticated using Firebase's Realtime Database integrated with UofT's Shibboleth authentication. </div>
                             
                         </ul>
                     </div>

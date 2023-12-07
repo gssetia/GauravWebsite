@@ -1,12 +1,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
 import { fadeIn } from 'react-animations'
-import './index.css';
 import About from './About';
 import Apps from './Apps';
 import Contact from './Contact';
 import gs from './Components/gss.jpeg';
-import uoftlogo from './Components/uoft.svg';
+import uoftlogo from './Components/uoft.png';
+import amdlogo from './Components/amd.png';
 
 const FadeIn = styled.div`animation: 4s ${keyframes`${fadeIn}`}`;
 
@@ -17,7 +17,7 @@ export default class Home extends React.Component {
 
 				<div className="container">
 					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
+					<link rel="stylesheet" href="./index.css" />
 					<div id='1' className='topOfPage row justify-content-center home'>
 
 						<div className='col-md-4 col-sm-12 centerContact'>
@@ -27,11 +27,18 @@ export default class Home extends React.Component {
 						<div className='col-md-8 col-sm-12'>
 							<FadeIn>
 								<h2 className='intro'>
-									<span className='welcome front'>Welcome to my Website!</span><br></br><br></br>
-									<span className='name front'>My name is Gaurav Setia</span><br></br>
-									<div className ='paddin'>
-									<span className='subText subFront'> Software Engineering new grad from the </span>
-									<img alt='Uoft logo' className='logo imgFront' src={uoftlogo} ></img>
+									<span className='welcome front '>Welcome to my Website!</span><br></br>
+									<br></br>
+									<span classname='ok'> I am a Software Engineer who...</span>
+									<br></br>
+									<br></br>
+									<div classname='row'> 
+									<span className='col-3 subText subFront'> worked at </span>
+									<img alt='Uoft logo' className='col-3 logo' src={amdlogo} ></img>
+									</div>
+									<div classname='row paddin '> 
+									<span className='col-3 subText subFront'> and studied at </span>
+									<img alt='Uoft logo' className='col-3 logo imgFront' src={uoftlogo} ></img>
 									</div>
 								</h2>
 							</FadeIn>

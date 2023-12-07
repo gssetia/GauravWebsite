@@ -5,7 +5,6 @@ import Home from './Home';
 
 import Error from './Error';
 import Navigation from './Navigation';
-import './index.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 

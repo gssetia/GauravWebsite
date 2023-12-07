@@ -51,8 +51,7 @@ body {
   font-size:3vw;
 }
 .logo{
-  height:15vw;
-
+  height:100%;
 }
 .home{
   padding-top:8vw;
@@ -64,7 +63,10 @@ body {
   text-align: center;
 }
 .subText{
-  font-size:1.7vw;
+  font-size:2vw;
+}
+.ok{
+  font-size:200px !important;
 }
 .paddin{
   padding-top:20px;
@@ -283,9 +285,8 @@ input[type=text]:focus{
   .subFront{
     font-size:3vw;
   }
-  .imgFront{
-    height:24vw;
-    object-position:0 -5px;
+  .subWho{
+    font-size:200px;
   }
   .listFront{
     text-indent: 0;
@@ -423,7 +424,7 @@ color:white;
 }
 
 .emphasis {
-  font-size:5vh;
+  font-size:4.5vh;
 }
 
 /*Contact*/
@@ -444,6 +445,10 @@ color:white;
 .brainmapperlogo{
   height:250px;
   width:325px;
+}
+.speechsweep{
+  height:250px;
+  width:350px;
 }
 .rover{
   height:250px;
